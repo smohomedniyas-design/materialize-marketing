@@ -1,61 +1,39 @@
 import React from 'react';
-import { HeroCarousel } from '@/components/HeroCarousel';
-import { StatsCounter } from '@/components/StatsCounter';
+import { HeroClean } from '@/components/HeroClean';
 import { ClientMarquee } from '@/components/ClientMarquee';
+import { ServicesClean } from '@/components/ServicesClean';
+import { ProcessClean } from '@/components/ProcessClean';
+import { WorkClean } from '@/components/WorkClean';
+import { PricingClean } from '@/components/PricingClean';
 import { OnlineScoreAudit } from '@/components/OnlineScoreAudit';
-import { ServicesPreview } from '@/components/ServicesPreview';
-import { WorkWall } from '@/components/WorkWall';
-import { PricingSection } from '@/components/PricingSection';
-import { CostEstimator } from '@/components/CostEstimator';
-import { FreeMarketingGuideBanner } from '@/components/FreeMarketingGuideBanner';
-import { ProcessTimeline } from '@/components/ProcessTimeline';
-import { IntakeForm } from '@/components/IntakeForm';
-import { CtaBanner } from '@/components/CtaBanner';
+import { ContactClean } from '@/components/ContactClean';
 
 export default function HomePage() {
   return (
     <>
-      {/* 1. Rotating Pillar Hero with Dual Skol-style CTA */}
-      <HeroCarousel />
+      {/* 1. Welcoming, High-Trust Skol-Style Hero */}
+      <HeroClean />
 
-      {/* 2. Trust Stats Bar */}
-      <StatsCounter />
-
-      {/* 3. Infinite Client Marquee */}
+      {/* 2. Client Trust Marquee Bar */}
       <ClientMarquee />
 
-      {/* 4. Skol Marketing Inspired: Free 5-Min Marketing Audit & Online Score Checker */}
+      {/* 3. The 4 Core Small-Business Marketing Pillars */}
+      <ServicesClean />
+
+      {/* 4. Streamlined 3-Step "No Stress" Roadmap */}
+      <ProcessClean />
+
+      {/* 5. Real Client Success Results & Case Studies */}
+      <WorkClean />
+
+      {/* 6. Transparent Flat Pricing ($25/mo Hosting & Growth Tiers) + FAQs */}
+      <PricingClean />
+
+      {/* 7. Free 5-Minute Marketing Audit & Online Score Diagnostic */}
       <OnlineScoreAudit />
 
-      {/* 5. Core Disciplines / Services */}
-      <ServicesPreview />
-
-      {/* 6. Portfolio / Work Wall with Category Filter Pills and SVG Mockups */}
-      <WorkWall />
-
-      {/* 7. Recurring Pricing Packages ($25/mo Launch, $99/mo Commerce, Full Retainers) */}
-      <PricingSection />
-
-      {/* 8. Interactive Scope & Cost Calculator Section */}
-      <section className="bg-sand/40 py-16 md:py-24 border-t border-ink/10">
-        <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <CostEstimator />
-        </div>
-      </section>
-
-      {/* 9. Skol Marketing Inspired: Free Marketing Handbook Lead Magnet */}
-      <div id="free-guide">
-        <FreeMarketingGuideBanner />
-      </div>
-
-      {/* 10. Streamlined 4-Step Milestone Process */}
-      <ProcessTimeline />
-
-      {/* 11. Project Intake Form */}
-      <IntakeForm />
-
-      {/* 12. Final Call to Action */}
-      <CtaBanner />
+      {/* 8. Direct Consultation Booking & Agency Contact Form */}
+      <ContactClean />
     </>
   );
 }

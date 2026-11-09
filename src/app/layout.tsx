@@ -4,34 +4,29 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 
 export const viewport: Viewport = {
-  themeColor: '#274a44',
+  themeColor: '#2563EB',
   width: 'device-width',
   initialScale: 1,
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://materializemarketing.com'),
+  metadataBase: new URL('https://materializem.com'),
   title: {
-    default: 'Materialize Marketing - Web Development, Digital Marketing & E-Commerce',
+    default: 'Materialize Marketing - Web Design, Local SEO & Marketing for Small Businesses',
     template: '%s | Materialize Marketing',
   },
   description:
-    'Materialize Marketing is a senior US-based team building custom web platforms, e-commerce storefronts, and executing end-to-end digital marketing strategies and solutions to turn traffic into compounding revenue.',
+    'Materialize Marketing helps US small businesses turn online visitors into paying customers. Custom websites from $25/mo, local Google ranking, social media management, and 24/7 AI lead capture.',
   keywords: [
-    'web development',
-    'digital marketing strategies',
-    'paid advertising management',
-    'growth marketing solutions',
-    'e-commerce development',
-    'landing pages',
-    'website maintenance',
-    'hosting',
-    'UI/UX design',
-    'US agency',
-    'Next.js development',
-    'Shopify Plus',
-    'Meta Ads management',
-    'Google Ads agency',
+    'small business web design',
+    'local marketing agency',
+    'DFW web design',
+    'Prosper Texas marketing',
+    'local SEO Google business profile',
+    'social media management',
+    'AI voice receptionist',
+    'small business websites',
+    'affordable website hosting',
   ],
   authors: [{ name: 'Materialize Marketing' }],
   creator: 'Materialize Marketing',
@@ -85,25 +80,29 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'ProfessionalService',
               name: 'Materialize Marketing',
-              url: 'https://materializemarketing.com',
+              url: 'https://materializem.com',
               description:
-                'Custom web development, e-commerce solutions, landing pages and funnels with hosting, maintenance and UI/UX.',
-              foundingDate: '2013',
+                'Custom web design, local SEO, social media management, and AI automations for American small businesses.',
               areaServed: 'US',
-              telephone: '+1-415-555-0134',
-              email: 'hello@materializemarketing.com',
+              telephone: '+1-469-215-7794',
+              email: 'hello@materializem.com',
+              parentOrganization: {
+                '@type': 'Organization',
+                name: 'Sands Planning Group',
+                url: 'https://www.sandspg.com/',
+              },
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: '548 Market St, Ste 300',
-                addressLocality: 'San Francisco',
-                addressRegion: 'CA',
+                addressLocality: 'Prosper',
+                addressRegion: 'TX',
+                postalCode: '75078',
                 addressCountry: 'US',
               },
             }),
           }}
         />
       </head>
-      <body id="top" className="bg-paper font-body text-ink antialiased selection:bg-lime selection:text-ink">
+      <body id="top" className="bg-white font-body text-slate-900 antialiased selection:bg-blue-100 selection:text-blue-900">
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-lime focus:px-4 focus:py-2 focus:font-bold focus:text-ink"
