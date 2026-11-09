@@ -220,6 +220,44 @@ export default function PricingPage() {
             </div>
           </div>
 
+          {/* Referral Rewards Program Banner */}
+          <div className="mt-20 max-w-5xl mx-auto rounded-3xl bg-ink text-white p-8 md:p-12 border border-white/10 shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-lime/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="relative z-10 grid md:grid-cols-12 gap-8 items-center">
+              <div className="md:col-span-8 space-y-3">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-lime/20 px-3 py-1 text-xs font-black uppercase tracking-wider text-lime">
+                  🎁 Client Referral Rewards Program
+                </span>
+                <h3 className="font-display text-2xl md:text-3xl font-extrabold text-white">
+                  Earn a <span className="text-lime">$100 Reward</span> for Every Business You Refer.
+                </h3>
+                <p className="text-sm text-white/70 leading-relaxed">
+                  Know a fellow business owner, doctor, contractor, or financial advisor whose website is outdated or non-existent?
+                  Introduce them to Materialize Marketing. When they launch a site with us or sign up for ongoing hosting,
+                  we send you a <strong>$100 direct cash reward</strong> or apply a <strong>$100 invoice credit</strong> to your account.
+                </p>
+                <p className="text-xs text-white/50">
+                  ✓ Unlimited referrals &nbsp;•&nbsp; ✓ Paid upon client launch &nbsp;•&nbsp; ✓ Zero complex paperwork
+                </p>
+              </div>
+              <div className="md:col-span-4 flex flex-col gap-3">
+                <Link
+                  href="/contact?type=Referral+Reward"
+                  className="btn-primary w-full text-center !py-3 !text-sm"
+                >
+                  Submit a Referral
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+                <a
+                  href="tel:4692157794"
+                  className="text-xs text-center text-white/60 hover:text-white transition-colors"
+                >
+                  Or call (469) 215-7794 to introduce
+                </a>
+              </div>
+            </div>
+          </div>
+
           {/* Pricing FAQ Section */}
           <div className="mt-28 max-w-4xl mx-auto">
             <div className="text-center mb-12">

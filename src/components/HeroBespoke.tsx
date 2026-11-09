@@ -142,18 +142,18 @@ export const HeroBespoke: React.FC = () => {
                 </a>
 
                 <a
-                  href="#contact"
+                  href="#free-guide"
                   className="btn-ghost text-sm sm:text-base px-7 py-4 text-center justify-center font-bold"
                 >
-                  Schedule Free 15-Min Call
+                  Get Free Marketing Guide
                 </a>
 
-                <Link
-                  href="/pricing"
+                <a
+                  href="#contact"
                   className="inline-flex items-center justify-center sm:justify-start gap-1 font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-lime hover:text-white transition-colors pt-2 sm:pt-0 sm:ml-2 text-center"
                 >
-                  Hosting from $25/mo &rarr;
-                </Link>
+                  Schedule Call &rarr;
+                </a>
               </div>
 
               {/* Interactive Progress Tabs for Human-Crafted Soul */}

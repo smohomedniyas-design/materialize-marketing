@@ -62,32 +62,32 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/services/digital-marketing" className="text-white/70 hover:text-white transition-colors">
+                <Link href="/services/seo" className="text-white/70 hover:text-white transition-colors">
                   Local SEO &amp; Google Maps 3-Pack
                 </Link>
               </li>
               <li>
-                <Link href="/services/digital-marketing" className="text-white/70 hover:text-white transition-colors">
+                <Link href="/services/geo" className="text-white/70 hover:text-white transition-colors">
                   AI Search &amp; GEO (ChatGPT Optimization)
                 </Link>
               </li>
               <li>
-                <Link href="/services/digital-marketing" className="text-white/70 hover:text-white transition-colors">
+                <Link href="/services/paid-ads" className="text-white/70 hover:text-white transition-colors">
                   Google Ads (PPC) &amp; Paid Social
                 </Link>
               </li>
               <li>
-                <Link href="/services/digital-marketing" className="text-white/70 hover:text-white transition-colors">
+                <Link href="/services/social-media" className="text-white/70 hover:text-white transition-colors">
                   Hands-Free Social Media Management
                 </Link>
               </li>
               <li>
-                <Link href="/services/ui-ux" className="text-white/70 hover:text-white transition-colors">
+                <Link href="/services/branding" className="text-white/70 hover:text-white transition-colors">
                   Branding &amp; Visual Identity Kits
                 </Link>
               </li>
               <li>
-                <Link href="/services/funnels" className="text-white/70 hover:text-white transition-colors">
+                <Link href="/services/ai-automation" className="text-white/70 hover:text-white transition-colors">
                   24/7 AI Voice Receptionists
                 </Link>
               </li>

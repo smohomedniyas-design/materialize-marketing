@@ -6,9 +6,9 @@ import { ArrowRight, CheckCircle2, ShieldCheck, Zap, Sparkles } from 'lucide-rea
 import { CtaBanner } from '@/components/CtaBanner';
 
 export const metadata: Metadata = {
-  title: 'Services & Capabilities - Web Engineering & Digital Marketing',
+  title: 'Services & Capabilities - Web Design, Local SEO, Ads & AI Automation',
   description:
-    'Full-stack digital infrastructure and marketing solutions across 6 core disciplines: Web Development, Digital Marketing & Growth, E-commerce, Landing Pages & Funnels, Managed Hosting, and UI/UX Design Systems.',
+    'Full-suite digital infrastructure and marketing solutions: Custom Web Design ($299), Cloud Hosting ($25/mo), Local SEO, GEO AI Search, Google Ads, Paid Social, Hands-Free Social Media, Branding, and 24/7 AI Receptionists.',
 };
 
 export default function ServicesPage() {

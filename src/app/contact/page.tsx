@@ -67,7 +67,7 @@ export default function ContactPage() {
 
               <div className="mt-8 pt-6 border-t border-ink/10">
                 <a
-                  href="mailto:hello@materializemarketing.com?subject=Discovery%20Call%20Request"
+                  href="mailto:hello@materializem.com?subject=Discovery%20Call%20Request"
                   className="btn-ink w-full !text-center !py-3 !text-sm"
                 >
                   Schedule Discovery Call via Email
@@ -84,8 +84,8 @@ export default function ContactPage() {
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-ink shrink-0 mt-0.5" />
                     <div>
-                      <span className="block font-bold text-ink">San Francisco Office</span>
-                      <span>548 Market St, Suite 300, San Francisco, CA 94104</span>
+                      <span className="block font-bold text-ink">Texas Headquarters</span>
+                      <span>Prosper, Texas 75078 • Dallas-Fort Worth Metro</span>
                     </div>
                   </div>
 
@@ -93,8 +93,18 @@ export default function ContactPage() {
                     <Phone className="w-5 h-5 text-ink shrink-0 mt-0.5" />
                     <div>
                       <span className="block font-bold text-ink">Direct Telephone</span>
-                      <a href="tel:+14155550134" className="underline hover:text-ink font-semibold">
-                        (415) 555-0134
+                      <a href="tel:4692157794" className="underline hover:text-ink font-semibold">
+                        (469) 215-7794
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <Mail className="w-5 h-5 text-ink shrink-0 mt-0.5" />
+                    <div>
+                      <span className="block font-bold text-ink">Email Inquiries</span>
+                      <a href="mailto:hello@materializem.com" className="underline hover:text-ink font-semibold">
+                        hello@materializem.com
                       </a>
                     </div>
                   </div>

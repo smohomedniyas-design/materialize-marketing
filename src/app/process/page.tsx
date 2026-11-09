@@ -107,30 +107,30 @@ export default function ProcessPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <div className="p-6 rounded-2xl border border-white/10 bg-coal">
               <MessageSquare className="w-8 h-8 text-lime mb-4" />
-              <h3 className="font-display font-bold text-lg">Shared Slack Channel</h3>
+              <h3 className="font-display font-bold text-lg">Direct Live Channel</h3>
               <p className="text-xs text-white/60 mt-2">
-                Direct daily communication with our principal architect and project lead - no account manager telephone games.
+                Direct communication with your agency manager (Niyas) and designer (Rusith) via phone, email, and live messaging.
               </p>
             </div>
             <div className="p-6 rounded-2xl border border-white/10 bg-coal">
               <Layers className="w-8 h-8 text-lime mb-4" />
-              <h3 className="font-display font-bold text-lg">Live Figma Workspaces</h3>
+              <h3 className="font-display font-bold text-lg">Live Figma Previews</h3>
               <p className="text-xs text-white/60 mt-2">
-                Comment directly on wireframes, interactive prototypes, and design systems as they are being crafted.
+                Comment directly on visual layouts and mobile mockups in real-time before any code is built.
               </p>
             </div>
             <div className="p-6 rounded-2xl border border-white/10 bg-coal">
               <GitBranch className="w-8 h-8 text-lime mb-4" />
-              <h3 className="font-display font-bold text-lg">Vercel Preview Deploys</h3>
+              <h3 className="font-display font-bold text-lg">Private Staging Links</h3>
               <p className="text-xs text-white/60 mt-2">
-                Every Friday, you receive a private password-protected staging URL to click through progress on your own device.
+                You receive a private staging link to click through and test your site on your phone and laptop before public launch.
               </p>
             </div>
             <div className="p-6 rounded-2xl border border-white/10 bg-coal">
               <Shield className="w-8 h-8 text-lime mb-4" />
-              <h3 className="font-display font-bold text-lg">Monday.com Sprint Board</h3>
+              <h3 className="font-display font-bold text-lg">Milestone Tracker</h3>
               <p className="text-xs text-white/60 mt-2">
-                Real-time milestone tracking, task assignments, and delivery schedules updated every single day.
+                Clear deliverables, task checklists, and guaranteed delivery dates updated in real time.
               </p>
             </div>
           </div>

@@ -63,10 +63,10 @@ export default function PrivacyPage() {
               <h2 className="font-display text-2xl font-bold text-ink mb-3">5. Contact Us</h2>
               <p>
                 If you have questions or requests regarding your personal information, please reach out to us at{' '}
-                <a href="mailto:privacy@materializemarketing.com" className="font-semibold underline decoration-lime text-ink">
-                  privacy@materializemarketing.com
+                <a href="mailto:hello@materializem.com" className="font-semibold underline decoration-lime text-ink">
+                  hello@materializem.com
                 </a>{' '}
-                or write to Materialize Marketing LLC, 548 Market St, Suite 300, San Francisco, CA 94104.
+                or call us at (469) 215-7794. You may also write to Materialize Marketing, Prosper, Texas 75078 (Dallas-Fort Worth metropolitan area).
               </p>
             </div>
           </div>

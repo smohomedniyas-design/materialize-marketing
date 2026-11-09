@@ -46,23 +46,23 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl font-bold text-ink mb-3">3. Intellectual Property &amp; Code Ownership</h2>
+              <h2 className="font-display text-2xl font-bold text-ink mb-3">3. Intellectual Property, Hosting &amp; Code Ownership</h2>
               <p>
-                Upon receipt of final milestone payment, full ownership of all custom source code, Git repositories, Figma mockups, visual assets, and content developed exclusively for your engagement transfers unconditionally to the client. We retain no proprietary licensing locks on your codebase.
+                For custom website projects bundled with managed hosting (e.g. $299 setup + $25/month), full ownership of all custom source code, design assets, and content transfers to the client upon completion of the initial 12-month hosting term. If the client wishes to transition to self-hosting prior to 12 months, they may do so at any time with a standard $200 design release buyout. We retain zero proprietary locks on your digital assets.
               </p>
             </div>
 
             <div>
               <h2 className="font-display text-2xl font-bold text-ink mb-3">4. Post-Launch Warranty &amp; Hypercare</h2>
               <p>
-                Every project includes a 30 to 90-day post-launch warranty during which any defects, functional bugs, or display inconsistencies will be rectified promptly at no cost. Ongoing maintenance, security patching, and SLA guarantees are provided under separate managed service agreements.
+                Every project includes proactive monitoring and ongoing maintenance. During your managed hosting retainer, any functional bugs, display inconsistencies, or security patches are resolved promptly by our US engineering team at no supplemental cost.
               </p>
             </div>
 
             <div>
-              <h2 className="font-display text-2xl font-bold text-ink mb-3">5. Governing Law</h2>
+              <h2 className="font-display text-2xl font-bold text-ink mb-3">5. Governing Law &amp; Jurisdiction</h2>
               <p>
-                These terms are governed by the laws of the State of California, United States, without regard to its conflict of law principles. Any dispute arising under these terms shall be resolved exclusively in the state or federal courts located in San Francisco, California.
+                These terms are governed by the laws of the State of Texas, United States, without regard to its conflict of law principles. Any dispute arising under these terms shall be resolved in the state or federal courts located in Collin County or Dallas County, Texas.
               </p>
             </div>
           </div>

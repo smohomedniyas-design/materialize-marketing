@@ -107,10 +107,10 @@ export default function AboutPage() {
           <div className="max-w-2xl mb-14">
             <span className="eyebrow text-ink/50">The Crew</span>
             <h2 className="section-h2 text-3xl md:text-4xl mt-3">
-              Meet Our Senior Leadership
+              Meet Our Team
             </h2>
             <p className="mt-3 text-sm text-ink/65">
-              Every project is led by a principal architect with 10+ years of verifiable production experience.
+              Dedicated builders and digital marketing specialists who treat your business like their own.
             </p>
           </div>
 
@@ -152,9 +152,9 @@ export default function AboutPage() {
       <section className="bg-ink text-white py-16 border-t border-white/10">
         <div className="mx-auto max-w-7xl px-5 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <span className="text-xs font-extrabold uppercase tracking-widest text-lime">San Francisco HQ</span>
-            <h3 className="font-display text-2xl font-bold mt-1">548 Market St, Suite 300, San Francisco, CA</h3>
-            <p className="text-sm text-white/60 mt-1">Available for in-person kickoffs in the Bay Area and nationwide remote sprints.</p>
+            <span className="text-xs font-extrabold uppercase tracking-widest text-lime">Texas Headquarters</span>
+            <h3 className="font-display text-2xl font-bold mt-1">Prosper, Texas 75078 • Dallas-Fort Worth Metro</h3>
+            <p className="text-sm text-white/60 mt-1">Operating in coordination with Sands Planning Group corporate advisory. Serving businesses nationwide.</p>
           </div>
           <Link href="/contact" className="btn-primary shrink-0">
             Work With Our Team <ArrowRight className="w-4 h-4 ml-1" />
