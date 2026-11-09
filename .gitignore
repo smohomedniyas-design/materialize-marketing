@@ -1,0 +1,32 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js build outputs & archives
+/.next/
+/out/
+/hostinger-deploy/
+*.zip
+
+# typescript cache
+*.tsbuildinfo
+
+# misc
+.DS_Store
+Thumbs.db
+*.log
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# root clutter / backups
+/HeroBG.mp4
+index_mm_backup.html

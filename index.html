@@ -1,0 +1,1435 @@
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Materialize Marketing | Custom Web Development, E-Commerce &amp; Funnels</title>
+  <meta name="description"
+    content="Materialize Marketing is a US-based team building custom websites, e-commerce platforms, and high-converting funnels, with professional UI/UX, reliable hosting, and a senior team that stays with you after launch." />
+  <meta name="keywords"
+    content="web development, e-commerce development, landing pages, website maintenance, hosting, UI/UX design, us agency" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://materializemarketing.com/" />
+  <link rel="icon" type="image/png" href="/icon.png" />
+  <link rel="apple-touch-icon" href="/apple-icon.png" />
+  <meta name="theme-color" content="#274a44" />
+  <!-- SEO note: in the React build, manage these tags via react-helmet-async <Seo .../> : markup below mirrors its output. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Materialize Marketing" />
+  <meta property="og:title" content="Materialize Marketing - Let's Build the Infrastructure." />
+  <meta property="og:description"
+    content="Custom web development, e-commerce, landing pages, UI/UX, hosting & maintenance. US-based. Launch results, not opinions." />
+  <meta property="og:url" content="https://materializemarketing.com/" />
+  <meta property="og:image" content="https://materializemarketing.com/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Materialize Marketing - Let's Build the Infrastructure." />
+  <meta name="twitter:description"
+    content="Custom web development, e-commerce, landing pages, UI/UX, hosting & maintenance. US-based." />
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Materialize Marketing","url":"https://materializemarketing.com","description":"Custom web development, e-commerce solutions, landing pages and funnels with hosting, maintenance and UI/UX.","foundingDate":"2013","areaServed":"US","telephone":"+1-415-555-0134","email":"hello@materializemarketing.com","address":{"@type":"PostalAddress","streetAddress":"548 Market St, Ste 300","addressLocality":"San Francisco","addressRegion":"CA","addressCountry":"US"}}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: {
+              DEFAULT: '#fff9b2',
+              light: '#fffde6',
+              dark: '#f2ea99',
+            },
+            pine: {
+              DEFAULT: '#274a44',
+              light: '#345e57',
+              dark: '#1c3732',
+              deep: '#122522',
+            },
+            ink: '#122522',
+            coal: '#17302c',
+            paper: '#FAF9F5',
+            sand: '#EDEAE0',
+            lime: '#fff9b2'
+          },
+          fontFamily: {
+            display: ['Archivo', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      --lime: #fff9b2;
+      --accent: #fff9b2;
+      --pine: #274a44;
+      --ink: #122522;
+      --coal: #17302c;
+      --paper: #FAF9F5;
+      --sand: #EDEAE0;
+    }
+
+    ::selection {
+      background: var(--lime);
+      color: var(--pine);
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
+    html, body {
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+
+    section[id] {
+      scroll-margin-top: 5.5rem;
+    }
+
+    .tabular {
+      font-variant-numeric: tabular-nums;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--lime);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    /* ---------- Type helpers ---------- */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .65rem;
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 3px;
+      border-radius: 2px;
+      background: var(--lime);
+    }
+
+    .section-h2 {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      line-height: 1.05;
+      font-size: clamp(2rem, 4.2vw, 3.25rem);
+    }
+
+    /* ---------- Hero carousel ---------- */
+    .hero-veil {
+      background:
+        radial-gradient(55% 60% at 18% 38%, rgba(18, 37, 34, .62), rgba(18, 37, 34, 0) 70%),
+        linear-gradient(to top, rgba(18, 37, 34, .96) 0%, rgba(23, 48, 44, .68) 42%, rgba(39, 74, 68, .42) 100%);
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transform: scale(1.05);
+      transition: opacity 1s ease, transform 1.6s ease;
+    }
+
+    .slide video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slide.is-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    #slideText {
+      transition: opacity .24s ease, transform .24s ease;
+    }
+
+    #slideText.swap {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+
+    .prog {
+      position: relative;
+      height: 6px;
+      width: 56px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .18);
+      overflow: hidden;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .prog .fill {
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: var(--lime);
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    .prog.active .fill {
+      animation: progFill var(--dur, 6s) linear forwards;
+    }
+
+    @keyframes progFill {
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    /* ---------- Buttons ---------- */
+    @media (max-width: 1023px) {
+      header .btn-primary, #siteHeader .btn-primary {
+        display: none !important;
+      }
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .6rem;
+      border-radius: 9999px;
+      background: var(--lime);
+      color: #122522;
+      font-weight: 800;
+      font-size: .925rem;
+      padding: .95rem 1.8rem;
+      transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background-color: #fffde6;
+      box-shadow: 0 14px 34px -10px rgba(39, 74, 68, .45);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .6rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, .28);
+      color: #fff;
+      font-weight: 600;
+      font-size: .925rem;
+      padding: .95rem 1.8rem;
+      transition: border-color .25s ease, background-color .25s ease, color .25s ease;
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(255, 249, 178, .85);
+      background: rgba(255, 249, 178, .1);
+      color: var(--lime);
+    }
+
+    .btn-ink {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .6rem;
+      border-radius: .9rem;
+      background: var(--pine);
+      color: #fff9b2;
+      font-weight: 800;
+      font-size: .925rem;
+      padding: 1rem 1.8rem;
+      transition: .25s ease;
+    }
+
+    .btn-ink:hover {
+      background: #1b3732;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px -12px rgba(18, 37, 34, .65);
+    }
+
+    .btn-ink-line {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .6rem;
+      border-radius: .9rem;
+      border: 1.5px solid var(--pine);
+      color: var(--pine);
+      font-weight: 700;
+      font-size: .925rem;
+      padding: 1rem 1.8rem;
+      transition: background-color .25s ease, color .25s ease;
+    }
+
+    .btn-ink-line:hover {
+      background: var(--pine);
+      color: #fff9b2;
+    }
+
+    .arrow-btn {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, .28);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      transition: .25s ease;
+    }
+
+    .arrow-btn:hover {
+      background: var(--lime);
+      border-color: var(--lime);
+      color: #122522;
+    }
+      border-color: var(--lime);
+      color: var(--ink);
+    }
+
+    /* ---------- Marquee ---------- */
+    .marquee {
+      overflow: hidden;
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 34s linear infinite;
+    }
+
+    .marquee:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      margin-right: 2.5rem;
+      white-space: nowrap;
+    }
+
+    .marquee-item::after {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+      background: rgba(11, 11, 13, .18);
+    }
+
+    @keyframes marquee {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* ---------- Work grid ---------- */
+    .pill {
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: 9999px;
+      padding: .55rem 1.1rem;
+      font-size: .8rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, .68);
+      transition: .25s ease;
+    }
+
+    .pill:hover {
+      border-color: rgba(255, 255, 255, .5);
+      color: #fff;
+    }
+
+    .pill.is-active {
+      background: var(--lime);
+      border-color: var(--lime);
+      color: #122522;
+      font-weight: 700;
+    }
+
+    .work-item svg {
+      transition: transform .6s cubic-bezier(.2, .6, .2, 1);
+    }
+
+    .work-item:hover svg {
+      transform: scale(1.05);
+    }
+
+    .work-overlay {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .35s ease, transform .35s ease;
+    }
+
+    .work-item:hover .work-overlay,
+    .work-item:focus-within .work-overlay,
+    .work-item.show .work-overlay {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ---------- Forms ---------- */
+    .field {
+      width: 100%;
+      border-radius: .65rem;
+      border: 1px solid rgba(11, 11, 13, .15);
+      background: #fff;
+      padding: .8rem 1rem;
+      font-size: .95rem;
+      color: var(--ink);
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+
+    .field::placeholder {
+      color: rgba(11, 11, 13, .38);
+    }
+
+    .field:focus {
+      outline: none;
+      border-color: var(--pine);
+      box-shadow: 0 0 0 3px rgba(255, 249, 178, .65);
+    }
+
+    select.field {
+      appearance: none;
+      -webkit-appearance: none;
+      padding-right: 2.6rem;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230B0B0D' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right .9rem center;
+    }
+
+    .check {
+      width: 1.25rem;
+      height: 1.25rem;
+      flex-shrink: 0;
+      margin-top: .15rem;
+    }
+
+    /* ---------- Reveal on scroll ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .8s cubic-bezier(.2, .6, .2, 1), transform .8s cubic-bezier(.2, .6, .2, 1);
+      transition-delay: var(--d, 0s);
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ---------- Header / mobile menu ---------- */
+    #siteHeader.is-scrolled {
+      background: rgba(11, 11, 13, .86);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    #mobileMenu {
+      position: fixed;
+      inset: 0;
+      z-index: 70;
+      background: var(--ink);
+      display: flex;
+      flex-direction: column;
+      padding: 6rem 1.5rem 2.5rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .3s ease, visibility .3s ease;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #mobileMenu.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track {
+        animation: none;
+      }
+
+      .slide {
+        transition: none;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+
+      * {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body id="top" class="bg-paper font-body text-ink antialiased">
+  <a href="#main"
+    class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-lime focus:px-4 focus:py-2 focus:font-bold focus:text-ink">Skip
+    to content</a>
+
+  <!-- ================= HEADER (WordPress template part: header.php) ================= -->
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <nav class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-5 md:h-20 lg:px-8"
+      aria-label="Primary">
+      <a href="#top" class="flex items-center gap-3 group" aria-label="Materialize Marketing Home">
+        <span
+          class="relative grid h-10 w-10 place-items-center rounded-xl bg-lime p-1.5 shadow-sm transition-transform duration-300 group-hover:scale-105">
+          <img src="/images/logo.png" alt="Materialize Marketing Logo" class="h-full w-full object-contain" width="36" height="36" />
+        </span>
+        <span class="leading-none">
+          <span class="block font-display text-lg font-black tracking-tight text-white transition-colors group-hover:text-lime">MATERIALIZE</span>
+          <span class="mt-1 block text-[9px] font-bold uppercase tracking-[0.32em] text-white/50">Marketing</span>
+        </span>
+      </a>
+      <ul class="hidden items-center gap-8 text-sm font-medium lg:flex">
+        <li><a class="text-white/70 transition hover:text-white" href="#services">Services</a></li>
+        <li><a class="text-white/70 transition hover:text-white" href="#work">Work</a></li>
+        <li><a class="text-white/70 transition hover:text-white" href="#pricing">Pricing</a></li>
+        <li><a class="text-white/70 transition hover:text-white" href="#process">Process</a></li>
+        <li><a class="text-white/70 transition hover:text-white" href="#intake">Contact</a></li>
+      </ul>
+      <div class="flex items-center gap-3">
+        <a href="#intake" class="btn-primary !hidden lg:!inline-flex whitespace-nowrap !py-3 !px-6 !text-sm">Start Your Project</a>
+        <button id="menuBtn"
+          class="grid h-10 w-10 place-items-center rounded-lg border border-white/20 text-white lg:hidden"
+          aria-label="Open menu" aria-expanded="false">
+          <svg id="iconOpen" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.2" stroke-linecap="round">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg id="iconClose" class="hidden" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" aria-label="Mobile navigation">
+    <div class="min-h-full flex flex-col justify-between max-w-md mx-auto w-full">
+      <ul class="flex flex-col gap-2 font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+        <li><a class="block py-2.5 text-white/85 transition hover:text-lime" href="#services">Services</a></li>
+        <li><a class="block py-2.5 text-white/85 transition hover:text-lime" href="#work">Work</a></li>
+        <li><a class="block py-2.5 text-white/85 transition hover:text-lime" href="#pricing">Pricing</a></li>
+        <li><a class="block py-2.5 text-white/85 transition hover:text-lime" href="#process">Process</a></li>
+        <li><a class="block py-2.5 text-white/85 transition hover:text-lime" href="#intake">Contact</a></li>
+      </ul>
+      <div class="mt-8 pt-6 border-t border-white/10">
+        <p class="text-center text-xs font-semibold uppercase tracking-[0.25em] text-white/40 break-all">
+          hello@materializemarketing.com</p>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ================= HERO: rotating pillar carousel + static headline (Hero.jsx) ================= -->
+    <section id="hero" class="relative min-h-screen overflow-hidden bg-ink" aria-label="Introduction">
+      <!-- Background Looping Video -->
+      <div id="slides" class="absolute inset-0 pointer-events-none overflow-hidden">
+        <video src="HeroBG.mp4" autoplay muted loop playsinline preload="auto" class="h-full w-full object-cover scale-105"></video>
+      </div>
+      <div class="hero-veil pointer-events-none absolute inset-0 z-10"></div>
+
+      <div class="relative z-10 flex min-h-screen flex-col">
+        <div class="mx-auto w-full max-w-7xl flex-1 px-5 pt-28 md:pt-36 lg:px-8 flex items-center">
+          <div class="max-w-4xl py-12 md:py-16">
+            <div class="inline-flex items-center gap-2 rounded-full bg-lime/15 border border-lime/30 px-3.5 py-1.5 backdrop-blur-md mb-6 max-w-full">
+              <span class="h-2 w-2 shrink-0 rounded-full bg-lime animate-pulse"></span>
+              <span class="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.16em] sm:tracking-[0.22em] text-lime truncate">
+                Full-Stack Web Infrastructure &amp; Growth Marketing
+              </span>
+            </div>
+
+            <h1 class="font-display text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[1.08] sm:leading-[1.05] tracking-tight text-white break-words">
+              Ready to Scale Your Business? Let's Build the <span class="text-lime">Infrastructure.</span>
+            </h1>
+
+            <p class="mt-5 sm:mt-6 max-w-3xl text-sm sm:text-lg md:text-xl lg:text-2xl text-white/80 leading-relaxed font-normal">
+              Materialize Marketing designs, builds, and scales high-performance websites, e-commerce platforms,
+              and end-to-end digital marketing strategies, turning visitors into customers and compounding revenue from launch day.
+            </p>
+
+            <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-6 w-full sm:w-auto">
+              <a href="#intake" class="btn-primary text-base px-8 py-4 w-full sm:w-auto text-center justify-center">
+                Start Your Project
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+              <a href="#pricing" class="btn-ghost text-base px-8 py-4 w-full sm:w-auto text-center justify-center">View Packages &amp; Pricing</a>
+              <a href="#services" class="inline-flex items-center justify-center sm:justify-start gap-2 font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-white/70 hover:text-lime transition-colors pt-1 sm:pt-0 sm:ml-1 text-center">
+                Explore All Disciplines &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust-stat bar -->
+        <div class="relative z-10 border-t border-white/10 bg-ink/55 backdrop-blur-sm">
+          <div class="mx-auto grid max-w-7xl grid-cols-2 md:grid-cols-4">
+            <div class="px-4 py-5 sm:px-6 sm:py-6 md:px-8 md:py-7">
+              <p class="font-display text-3xl sm:text-4xl font-extrabold leading-none tabular text-white md:text-5xl"><span
+                  class="count" data-target="2" data-suffix="+">2+</span></p>
+              <p class="mt-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white/50 md:text-[11px]">Years
+                Experience</p>
+            </div>
+            <div class="border-l border-white/10 px-4 py-5 sm:px-6 sm:py-6 md:px-8 md:py-7">
+              <p class="font-display text-3xl sm:text-4xl font-extrabold leading-none tabular text-white md:text-5xl"><span
+                  class="count" data-target="20" data-suffix="+">20+</span></p>
+              <p class="mt-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white/50 md:text-[11px]">Clients
+                Launched</p>
+            </div>
+            <div class="border-t border-white/10 px-4 py-5 sm:px-6 sm:py-6 md:border-t-0 md:border-l md:border-white/10 md:px-8 md:py-7">
+              <p class="font-display text-3xl sm:text-4xl font-extrabold leading-none tabular text-white md:text-5xl"><span
+                  class="count" data-target="60" data-suffix="+">60+</span></p>
+              <p class="mt-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white/50 md:text-[11px]">Projects
+                Delivered</p>
+            </div>
+            <div class="border-t border-l border-white/10 px-4 py-5 sm:px-6 sm:py-6 md:border-t-0 md:border-l md:border-white/10 md:px-8 md:py-7">
+              <p class="font-display text-3xl sm:text-4xl font-extrabold leading-none tabular text-white md:text-5xl"><span
+                  class="count" data-target="4" data-suffix="">4</span></p>
+              <p class="mt-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white/50 md:text-[11px]">Person Team
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CLIENT MARQUEE ================= -->
+    <section class="border-b border-ink/10 bg-paper py-6 md:py-8" aria-label="Our clients">
+      <p class="text-center text-[11px] font-extrabold uppercase tracking-[0.3em] text-ink/40">Live Websites &amp; Platforms We Launched</p>
+      <div class="marquee mt-6">
+        <div class="marquee-track">
+          <div class="flex">
+            <span class="marquee-item"><a href="https://pivotalfamilyoffice.com/" target="_blank" rel="noopener noreferrer" class="font-display text-xl font-extrabold uppercase tracking-wide text-ink/40 transition hover:text-ink md:text-2xl">Pivotal Family Office</a></span>
+            <span class="marquee-item"><a href="https://pivotalcreatorsupply.com/" target="_blank" rel="noopener noreferrer" class="font-display text-xl font-extrabold uppercase tracking-wide text-ink/40 transition hover:text-ink md:text-2xl">Pivotal Creator Supply</a></span>
+            <span class="marquee-item"><a href="https://entouragetransport.com/" target="_blank" rel="noopener noreferrer" class="font-display text-xl font-extrabold uppercase tracking-wide text-ink/40 transition hover:text-ink md:text-2xl">Entourage Transport</a></span>
+            <span class="marquee-item"><a href="https://therichsinners.com/" target="_blank" rel="noopener noreferrer" class="font-display text-xl font-extrabold uppercase tracking-wide text-ink/40 transition hover:text-ink md:text-2xl">Rich Sinners Records</a></span>
+            <span class="marquee-item"><a href="https://shop.therichsinners.com/" target="_blank" rel="noopener noreferrer" class="font-display text-xl font-extrabold uppercase tracking-wide text-ink/40 transition hover:text-ink md:text-2xl">Rich Sinners Merch Shop</a></span>
+            <span class="marquee-item"><a href="https://pivotalwealthandtax.com/" target="_blank" rel="noopener noreferrer" class="font-display text-xl font-extrabold uppercase tracking-wide text-ink/40 transition hover:text-ink md:text-2xl">Pivotal Wealth &amp; Tax</a></span>
+          </div>
+          <div class="flex" aria-hidden="true">
+            <span class="marquee-item"><a href="https://pivotalfamilyoffice.com/" target="_blank" rel="noopener noreferrer" class="font-display text-xl font-extrabold uppercase tracking-wide text-ink/40 transition hover:text-ink md:text-2xl">Pivotal Family Office</a></span>
+            <span class="marquee-item"><a href="https://pivotalcreatorsupply.com/" target="_blank" rel="noopener noreferrer" class="font-display text-xl font-extrabold uppercase tracking-wide text-ink/40 transition hover:text-ink md:text-2xl">Pivotal Creator Supply</a></span>
+            <span class="marquee-item"><a href="https://entouragetransport.com/" target="_blank" rel="noopener noreferrer" class="font-display text-xl font-extrabold uppercase tracking-wide text-ink/40 transition hover:text-ink md:text-2xl">Entourage Transport</a></span>
+            <span class="marquee-item"><a href="https://therichsinners.com/" target="_blank" rel="noopener noreferrer" class="font-display text-xl font-extrabold uppercase tracking-wide text-ink/40 transition hover:text-ink md:text-2xl">Rich Sinners Records</a></span>
+            <span class="marquee-item"><a href="https://shop.therichsinners.com/" target="_blank" rel="noopener noreferrer" class="font-display text-xl font-extrabold uppercase tracking-wide text-ink/40 transition hover:text-ink md:text-2xl">Rich Sinners Merch Shop</a></span>
+            <span class="marquee-item"><a href="https://pivotalwealthandtax.com/" target="_blank" rel="noopener noreferrer" class="font-display text-xl font-extrabold uppercase tracking-wide text-ink/40 transition hover:text-ink md:text-2xl">Pivotal Wealth &amp; Tax</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES (Services.jsx) ================= -->
+    <section id="services" class="bg-paper py-20 text-ink md:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="max-w-3xl reveal">
+          <p class="eyebrow text-ink/50">What we do</p>
+          <h2 class="section-h2 mt-4">Full-stack infrastructure for your next move.</h2>
+          <p class="mt-4 max-w-xl text-base text-ink/60 md:text-lg">Six disciplines, one senior team. Every project
+            ships with the same standard: speed, reliability, and revenue measured in real dollars.</p>
+        </div>
+        <ul class="mt-12 divide-y divide-ink/10 border-y border-ink/10">
+          <li id="svc-web-dev">
+            <a href="#intake" class="group flex items-center gap-6 py-6 transition md:py-7">
+              <span class="w-8 text-sm font-extrabold tabular text-ink/40">01</span>
+              <span class="flex-1">
+                <span
+                  class="block font-display text-2xl font-extrabold tracking-tight transition-transform duration-300 group-hover:translate-x-2 md:text-4xl">Web
+                  Development</span>
+                <span class="mt-1 block max-w-xl text-sm text-ink/55 md:text-base">Hand-rolled React and Next.js builds
+                  : fast, secure, and tuned for conversion.</span>
+              </span>
+              <span
+                class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-ink/15 transition duration-300 group-hover:border-lime group-hover:bg-lime">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li id="svc-digital-marketing">
+            <a href="#intake" class="group flex items-center gap-6 py-6 transition md:py-7">
+              <span class="w-8 text-sm font-extrabold tabular text-ink/40">02</span>
+              <span class="flex-1">
+                <span
+                  class="block font-display text-2xl font-extrabold tracking-tight transition-transform duration-300 group-hover:translate-x-2 md:text-4xl">Digital
+                  Marketing &amp; Growth</span>
+                <span class="mt-1 block max-w-xl text-sm text-ink/55 md:text-base">Full-funnel digital marketing strategies,
+                  Meta &amp; Google ad management, SEO, and active campaign handling.</span>
+              </span>
+              <span
+                class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-ink/15 transition duration-300 group-hover:border-lime group-hover:bg-lime">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li id="svc-ecommerce">
+            <a href="#intake" class="group flex items-center gap-6 py-6 transition md:py-7">
+              <span class="w-8 text-sm font-extrabold tabular text-ink/40">03</span>
+              <span class="flex-1">
+                <span
+                  class="block font-display text-2xl font-extrabold tracking-tight transition-transform duration-300 group-hover:translate-x-2 md:text-4xl">E-commerce
+                  Solutions</span>
+                <span class="mt-1 block max-w-xl text-sm text-ink/55 md:text-base">Storefronts that sell: Shopify,
+                  WooCommerce, and custom, with checkout that converts.</span>
+              </span>
+              <span
+                class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-ink/15 transition duration-300 group-hover:border-lime group-hover:bg-lime">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li id="svc-funnels">
+            <a href="#intake" class="group flex items-center gap-6 py-6 transition md:py-7">
+              <span class="w-8 text-sm font-extrabold tabular text-ink/40">04</span>
+              <span class="flex-1">
+                <span
+                  class="block font-display text-2xl font-extrabold tracking-tight transition-transform duration-300 group-hover:translate-x-2 md:text-4xl">Landing
+                  Pages &amp; Funnels</span>
+                <span class="mt-1 block max-w-xl text-sm text-ink/55 md:text-base">Single-goal pages built around speed,
+                  clarity, and measurable revenue.</span>
+              </span>
+              <span
+                class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-ink/15 transition duration-300 group-hover:border-lime group-hover:bg-lime">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li id="svc-hosting">
+            <a href="#intake" class="group flex items-center gap-6 py-6 transition md:py-7">
+              <span class="w-8 text-sm font-extrabold tabular text-ink/40">05</span>
+              <span class="flex-1">
+                <span
+                  class="block font-display text-2xl font-extrabold tracking-tight transition-transform duration-300 group-hover:translate-x-2 md:text-4xl">Maintenance
+                  &amp; Hosting</span>
+                <span class="mt-1 block max-w-xl text-sm text-ink/55 md:text-base">Reliable infrastructure, security
+                  updates, and support so you can sleep and sell.</span>
+              </span>
+              <span
+                class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-ink/15 transition duration-300 group-hover:border-lime group-hover:bg-lime">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li id="svc-uiux">
+            <a href="#intake" class="group flex items-center gap-6 py-6 transition md:py-7">
+              <span class="w-8 text-sm font-extrabold tabular text-ink/40">06</span>
+              <span class="flex-1">
+                <span
+                  class="block font-display text-2xl font-extrabold tracking-tight transition-transform duration-300 group-hover:translate-x-2 md:text-4xl">UI/UX
+                  Design Mockups</span>
+                <span class="mt-1 block max-w-xl text-sm text-ink/55 md:text-base">Pixel-obsessed mockups and design
+                  systems, prototyped before a line is coded.</span>
+              </span>
+              <span
+                class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-ink/15 transition duration-300 group-hover:border-lime group-hover:bg-lime">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= PORTFOLIO / WORK WALL (Work.jsx) ================= -->
+    <section id="work" class="bg-coal py-20 text-white md:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-xl reveal">
+            <p class="eyebrow text-white/50">Recently completed projects</p>
+            <h2 class="section-h2 mt-4">Finished work.<br class="hidden sm:block" /> Measured results.</h2>
+          </div>
+          <!-- Category filters -->
+          <div class="flex flex-wrap gap-2.5" role="group" aria-label="Filter projects by category">
+            <button class="pill is-active" data-filter="All">All Work</button>
+            <button class="pill" data-filter="E-commerce">E-commerce</button>
+            <button class="pill" data-filter="Landing Pages">Landing Pages</button>
+            <button class="pill" data-filter="Custom Dev">Custom Dev</button>
+            <button class="pill" data-filter="UI/UX">UI/UX</button>
+          </div>
+        </div>
+
+        <!-- Grid injected by JS from PROJECTS data -->
+        <div id="workGrid" class="mt-12 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"></div>
+
+        <div class="mt-14 flex justify-center">
+          <button id="workToggle" class="btn-ghost">View All Work</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRICING (Pricing.jsx) ================= -->
+    <section id="pricing" class="bg-paper py-20 text-ink md:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="eyebrow justify-center text-ink/50">Pricing</p>
+          <h2 class="section-h2 mt-4">Packages that get you to launch.</h2>
+          <p class="mt-4 text-base text-ink/60 md:text-lg">Fixed quotes, no surprise line items. Every package includes
+            development, UI/UX, hosting setup, and a real human on support.</p>
+        </div>
+
+        <div class="mx-auto mt-14 grid max-w-6xl gap-6 lg:grid-cols-3 lg:items-stretch">
+          <!-- Tier 1 -->
+          <div class="reveal flex flex-col rounded-2xl border border-ink/10 bg-white p-5 sm:p-7 md:p-8 shadow-sm">
+            <p class="text-xs font-extrabold uppercase tracking-[0.25em] text-ink/45">Starter</p>
+            <h3 class="mt-3 font-display text-2xl font-extrabold tracking-tight">Launch</h3>
+            <p class="mt-2 text-sm text-ink/55">For landing pages and your first storefront.</p>
+            <p class="mt-6"><span class="font-display text-4xl sm:text-5xl font-black tracking-tight">$299</span><span
+                class="ml-1.5 text-sm font-semibold text-ink/50">+ / one-time</span></p>
+            <ul class="mt-7 flex-1 space-y-3.5 text-sm md:text-[15px]">
+              <li class="flex gap-3"><svg class="check text-ink" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>1-2 custom pages, conversion-first</li>
+              <li class="flex gap-3"><svg class="check text-ink" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>UI/UX mockups (Figma) + mini design system</li>
+              <li class="flex gap-3"><svg class="check text-ink" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>Managed hosting, SSL &amp; CDN setup</li>
+              <li class="flex gap-3"><svg class="check text-ink" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>Analytics &amp; conversion tag plan</li>
+              <li class="flex gap-3"><svg class="check text-ink" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>30-day maintenance window</li>
+            </ul>
+            <a href="#intake" class="btn-ink-line mt-8 w-full">Start a Launch</a>
+          </div>
+
+          <!-- Tier 2 (Most Popular) -->
+          <div
+            class="reveal relative flex flex-col rounded-2xl border border-ink bg-ink p-5 sm:p-7 text-white shadow-2xl md:p-8 lg:-my-4 lg:py-12"
+            style="--d:.1s">
+            <span
+              class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-lime px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.22em] text-ink">Most
+              Popular</span>
+            <p class="text-xs font-extrabold uppercase tracking-[0.25em] text-white/45">Professional</p>
+            <h3 class="mt-3 font-display text-2xl font-extrabold tracking-tight">Commerce</h3>
+            <p class="mt-2 text-sm text-white/55">For online stores ready to sell at scale.</p>
+            <p class="mt-6"><span class="font-display text-4xl sm:text-5xl font-black tracking-tight">$699</span><span
+                class="ml-1.5 text-sm font-semibold text-white/50">+ / project</span></p>
+            <ul class="mt-7 flex-1 space-y-3.5 text-sm md:text-[15px]">
+              <li class="flex gap-3"><svg class="check text-lime" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>3-8 pages on Shopify or custom stack</li>
+              <li class="flex gap-3"><svg class="check text-lime" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>Full UI/UX design system</li>
+              <li class="flex gap-3"><svg class="check text-lime" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>Checkout, taxes &amp; payments configured</li>
+              <li class="flex gap-3"><svg class="check text-lime" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>Content migration &amp; SEO foundation</li>
+              <li class="flex gap-3"><svg class="check text-lime" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>90-day maintenance + priority support</li>
+            </ul>
+            <a href="#intake" class="btn-primary mt-8 w-full">Start Your Project</a>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="reveal flex flex-col rounded-2xl border border-ink/10 bg-white p-5 sm:p-7 md:p-8 shadow-sm"
+            style="--d:.2s">
+            <p class="text-xs font-extrabold uppercase tracking-[0.25em] text-ink/45">Enterprise</p>
+            <h3 class="mt-3 font-display text-2xl font-extrabold tracking-tight">Custom</h3>
+            <p class="mt-2 text-sm text-ink/55">For platforms, SaaS, and serious scale.</p>
+            <p class="mt-6"><span class="font-display text-5xl font-black tracking-tight">Custom</span><span
+                class="ml-1.5 text-sm font-semibold text-ink/50">quote</span></p>
+            <ul class="mt-7 flex-1 space-y-3.5 text-sm md:text-[15px]">
+              <li class="flex gap-3"><svg class="check text-ink" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>Everything in Commerce, plus:</li>
+              <li class="flex gap-3"><svg class="check text-ink" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>Custom React/Next.js codebase, APIs &amp; integrations</li>
+              <li class="flex gap-3"><svg class="check text-ink" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>SSO, roles &amp; security hardening</li>
+              <li class="flex gap-3"><svg class="check text-ink" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>Dedicated success manager &amp; 99.9% SLA</li>
+              <li class="flex gap-3"><svg class="check text-ink" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>Quarterly reviews + ongoing retainer support</li>
+            </ul>
+            <a href="#intake" class="btn-ink-line mt-8 w-full">Talk to Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROCESS (Process.jsx) ================= -->
+    <section id="process" class="border-t border-ink/10 bg-paper py-20 text-ink md:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="max-w-3xl reveal">
+          <p class="eyebrow text-ink/50">Our process</p>
+          <h2 class="section-h2 mt-4">From kickoff to launch in twelve weeks.</h2>
+          <p class="mt-4 text-base text-ink/60 md:text-lg">A proven pipeline refined across 60+ launches. You always
+            know what shipped, what's next, and exactly what it costs.</p>
+        </div>
+        <ol class="mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <li class="border-t-2 border-ink/10 pt-6 transition-colors hover:border-lime">
+            <p><span class="font-display text-5xl font-black text-ink">01</span><span
+                class="ml-3 inline-block rounded-full bg-ink px-3 py-1 align-middle text-[10px] font-extrabold uppercase tracking-[0.18em] text-lime">Week
+                1</span></p>
+            <h3 class="mt-4 font-display text-xl font-extrabold tracking-tight">Discovery</h3>
+            <p class="mt-2 text-sm text-ink/55 md:text-[15px]">We map goals, users, and revenue, then you get a fixed
+              quote. No surprises, ever.</p>
+          </li>
+          <li class="border-t-2 border-ink/10 pt-6 transition-colors hover:border-lime">
+            <p><span class="font-display text-5xl font-black text-ink">02</span><span
+                class="ml-3 inline-block rounded-full bg-ink px-3 py-1 align-middle text-[10px] font-extrabold uppercase tracking-[0.18em] text-lime">Weeks
+                2-3</span></p>
+            <h3 class="mt-4 font-display text-xl font-extrabold tracking-tight">Design</h3>
+            <p class="mt-2 text-sm text-ink/55 md:text-[15px]">UI/UX mockups, a real design system, and tested flows
+              you'll approve in days.</p>
+          </li>
+          <li class="border-t-2 border-ink/10 pt-6 transition-colors hover:border-lime">
+            <p><span class="font-display text-5xl font-black text-ink">03</span><span
+                class="ml-3 inline-block rounded-full bg-ink px-3 py-1 align-middle text-[10px] font-extrabold uppercase tracking-[0.18em] text-lime">Weeks
+                4-8</span></p>
+            <h3 class="mt-4 font-display text-xl font-extrabold tracking-tight">Development</h3>
+            <p class="mt-2 text-sm text-ink/55 md:text-[15px]">Fast iteration with weekly demos on your screen. You're
+              always in the driver's seat.</p>
+          </li>
+          <li class="border-t-2 border-ink/10 pt-6 transition-colors hover:border-lime">
+            <p><span class="font-display text-5xl font-black text-ink">04</span><span
+                class="ml-3 inline-block rounded-full bg-ink px-3 py-1 align-middle text-[10px] font-extrabold uppercase tracking-[0.18em] text-lime">Weeks
+                9-12</span></p>
+            <h3 class="mt-4 font-display text-xl font-extrabold tracking-tight">Launch</h3>
+            <p class="mt-2 text-sm text-ink/55 md:text-[15px]">Migration, DNS, monitoring, and a launch trained by our
+              own crew, not a checklist.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= INTAKE / MONDAY.COM EMBED SLOT (Intake.jsx) ================= -->
+    <section id="intake" class="bg-sand py-20 text-ink md:py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="grid items-start gap-12 lg:grid-cols-12">
+          <div class="lg:col-span-5">
+            <p class="eyebrow text-ink/50">Get started</p>
+            <h2 class="section-h2 mt-4">Tell us about your project.</h2>
+            <p class="mt-4 text-base text-ink/60 md:text-lg">Perhaps your site has outgrown its host, or your checkout
+              leaks sales? Share the brief below and we'll come back with honest options and a fixed quote.</p>
+            <ul class="mt-8 space-y-3.5 text-sm font-semibold md:text-base">
+              <li class="flex gap-3"><svg class="check text-ink" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>A reply within one business day</li>
+              <li class="flex gap-3"><svg class="check text-ink" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>Fixed quote before we write a line of code</li>
+              <li class="flex gap-3"><svg class="check text-ink" viewBox="0 0 20 20" fill="none">
+                  <path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>No lock-in: talk it over first, always</li>
+            </ul>
+            <div class="mt-10 space-y-2 text-sm md:text-base">
+              <p class="font-bold">Prefer email or a voice note?</p>
+              <p class="text-ink/60"><a
+                  class="font-semibold underline decoration-lime decoration-2 underline-offset-4 transition hover:text-ink"
+                  href="mailto:hello@materializemarketing.com">hello@materializemarketing.com</a></p>
+              <p class="text-ink/60"><a
+                  class="font-semibold underline decoration-lime decoration-2 underline-offset-4 transition hover:text-ink"
+                  href="tel:+14155550134">(415) 555-0134</a> · Mon-Fri, 9am-6pm PT</p>
+              <p class="pt-2 text-ink/45">HQ: 548 Market St, San Francisco, CA</p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <!-- ============ MONDAY.COM EMBED (how-to) ============
+             1) In Monday.com, create your intake form ("Project Brief").
+             2) Forms → Embed → iFrame → copy the URL.
+             3) Replace everything inside #mondayEmbed with:
+             <iframe src="https://YOUR_ACCOUNT.monday.com/forms/YOUR_FORM"
+                     style="width:100%;min-height:560px;border:0;border-radius:1rem"
+                     title="Project brief form" loading="lazy"></iframe>
+             The native form below is the working fallback (no JS changes needed).
+        ================================================== -->
+            <div id="mondayEmbed" class="rounded-2xl border border-ink/10 bg-white p-4 sm:p-6 md:p-8 shadow-xl">
+              <form id="intakeForm" class="grid gap-5" novalidate>
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <div>
+                    <label for="fName"
+                      class="mb-1.5 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-ink/55">Full Name
+                      <span class="text-orange-600">*</span></label>
+                    <input id="fName" name="name" type="text" required placeholder="Jane Cooper" class="field"
+                      autocomplete="name" />
+                  </div>
+                  <div>
+                    <label for="fEmail"
+                      class="mb-1.5 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-ink/55">Work Email
+                      <span class="text-orange-600">*</span></label>
+                    <input id="fEmail" name="email" type="email" required placeholder="jane@company.com" class="field"
+                      autocomplete="email" />
+                  </div>
+                </div>
+                <div class="grid gap-5 sm:grid-cols-2">
+                  <div>
+                    <label for="fCompany"
+                      class="mb-1.5 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-ink/55">Company</label>
+                    <input id="fCompany" name="company" type="text" placeholder="Acme Inc." class="field"
+                      autocomplete="organization" />
+                  </div>
+                  <div>
+                    <label for="fType"
+                      class="mb-1.5 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-ink/55">Project
+                      Type</label>
+                    <select id="fType" name="type" class="field">
+                      <option>Web Development</option>
+                      <option>E-commerce</option>
+                      <option>Landing Page / Funnel</option>
+                      <option>UI/UX Design</option>
+                      <option>Maintenance &amp; Hosting</option>
+                      <option>Not sure yet</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label for="fBudget"
+                    class="mb-1.5 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-ink/55">Budget
+                    Range</label>
+                  <select id="fBudget" name="budget" class="field">
+                    <option>Under $300</option>
+                    <option selected>$300 - $700</option>
+                    <option>$700 - $1,500</option>
+                    <option>$1,500 - $3,000</option>
+                    <option>$3,000+</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="fMsg"
+                    class="mb-1.5 block text-[11px] font-extrabold uppercase tracking-[0.18em] text-ink/55">Project
+                    Brief <span class="text-orange-600">*</span></label>
+                  <textarea id="fMsg" name="message" required rows="4"
+                    placeholder="Tell us what you're building, who it's for, and what success looks like..."
+                    class="field resize-y"></textarea>
+                </div>
+                <button type="submit" class="btn-ink w-full">Send My Project Brief</button>
+                <p class="text-center text-xs text-ink/45">Typically replies within one business day. We never share
+                  your details.</p>
+              </form>
+
+              <div id="formSuccess" class="hidden flex-col items-center justify-center py-16 text-center" role="status">
+                <span class="grid h-16 w-16 place-items-center rounded-full bg-lime">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0B0B0D" stroke-width="2.6"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 12.5l5 5L20 6.5" />
+                  </svg>
+                </span>
+                <h3 class="mt-6 font-display text-3xl font-extrabold tracking-tight">Brief received! Talk soon.</h3>
+                <p class="mt-3 max-w-sm text-sm text-ink/55 md:text-base">Your project brief is in the pipeline. Expect
+                  a personal reply from a senior strategist within 24 hours.</p>
+                <button id="formReset" class="btn-ink-line mt-8">Send Another Brief</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA BAND ================= -->
+    <section class="relative overflow-hidden bg-ink py-20 text-white md:py-28">
+      <div
+        class="pointer-events-none absolute -top-40 left-1/2 h-96 w-[52rem] -translate-x-1/2 rounded-full bg-lime/10 blur-3xl">
+      </div>
+      <div class="relative mx-auto max-w-5xl px-5 text-center lg:px-8">
+        <h2 class="font-display text-4xl font-extrabold tracking-tight md:text-6xl">Your launch deserves <span
+            class="text-lime">better infrastructure.</span></h2>
+        <p class="mx-auto mt-5 max-w-xl text-base text-white/65 md:text-lg">Book a free 30-minute discovery call. Leave
+          with a clear picture of the path: no obligation, no fluff.</p>
+        <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
+          <a href="#intake" class="btn-primary">Start Your Project</a>
+          <a class="btn-ghost" href="tel:+14155550134">Call (415) 555-0134</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-white/10 bg-ink text-white">
+    <div class="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-2 lg:grid-cols-12 lg:px-8">
+      <div class="lg:col-span-4">
+        <a href="#top" class="flex items-center gap-3 group" aria-label="Materialize Marketing Home">
+          <span
+            class="relative grid h-10 w-10 place-items-center rounded-xl bg-lime p-1.5 shadow-sm transition-transform duration-300 group-hover:scale-105">
+            <img src="/images/logo.png" alt="Materialize Marketing Logo" class="h-full w-full object-contain" width="36" height="36" />
+          </span>
+          <span class="leading-none">
+            <span class="block font-display text-lg font-black tracking-tight transition-colors group-hover:text-lime">MATERIALIZE</span>
+            <span class="mt-1 block text-[9px] font-bold uppercase tracking-[0.32em] text-white/50">Marketing</span>
+          </span>
+        </a>
+        <p class="mt-5 max-w-sm text-sm leading-relaxed text-white/55">A US-based team building high-performance
+          web infrastructure and handling end-to-end digital marketing strategies behind 20+ launched businesses: fast, reliable, and revenue-focused.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#" aria-label="LinkedIn"
+            class="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-white/60 transition hover:border-lime hover:bg-lime hover:text-ink"><svg
+              width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
+            </svg></a>
+          <a href="#" aria-label="X (Twitter)"
+            class="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-white/60 transition hover:border-lime hover:bg-lime hover:text-ink"><svg
+              width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z" />
+            </svg></a>
+          <a href="#" aria-label="GitHub"
+            class="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-white/60 transition hover:border-lime hover:bg-lime hover:text-ink"><svg
+              width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.69-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="lg:col-span-2">
+        <h3 class="text-xs font-extrabold uppercase tracking-[0.25em] text-white/40">Services</h3>
+        <ul class="mt-5 space-y-3 text-sm text-white/70">
+          <li><a class="transition hover:text-lime" href="#svc-web-dev">Web Development</a></li>
+          <li><a class="transition hover:text-lime" href="#svc-digital-marketing">Digital Marketing &amp; Growth</a></li>
+          <li><a class="transition hover:text-lime" href="#svc-ecommerce">E-commerce Solutions</a></li>
+          <li><a class="transition hover:text-lime" href="#svc-funnels">Landing Pages &amp; Funnels</a></li>
+          <li><a class="transition hover:text-lime" href="#svc-hosting">Maintenance &amp; Hosting</a></li>
+          <li><a class="transition hover:text-lime" href="#svc-uiux">UI/UX Design Mockups</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <h3 class="text-xs font-extrabold uppercase tracking-[0.25em] text-white/40">Company</h3>
+        <ul class="mt-5 space-y-3 text-sm text-white/70">
+          <li><a class="transition hover:text-lime" href="#work">Recently Completed Projects</a></li>
+          <li><a class="transition hover:text-lime" href="#pricing">Packages &amp; Pricing</a></li>
+          <li><a class="transition hover:text-lime" href="#process">Our Process</a></li>
+          <li><a class="transition hover:text-lime" href="#intake">Start Your Project</a></li>
+          <li><a class="transition hover:text-lime" href="#top">About Us</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <h3 class="text-xs font-extrabold uppercase tracking-[0.25em] text-white/40">Contact</h3>
+        <ul class="mt-5 space-y-3 text-sm text-white/70">
+          <li><a class="transition hover:text-lime"
+              href="mailto:hello@materializemarketing.com">hello@materializemarketing.com</a></li>
+          <li><a class="transition hover:text-lime" href="tel:+14155550134">(415) 555-0134</a></li>
+          <li>548 Market St, Ste 300<br class="hidden md:block" /> San Francisco, CA 94104</li>
+          <li class="text-white/45">Mon-Fri, 9am-6pm PT · US only</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-6 text-xs text-white/40 md:flex-row lg:px-8 text-center md:text-left">
+        <p>© <span id="year">2025</span> Materialize Marketing LLC. All rights reserved.</p>
+        <ul class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+          <li><a class="transition hover:text-white" href="#">Privacy</a></li>
+          <li><a class="transition hover:text-white" href="#">Terms</a></li>
+          <li><a class="transition hover:text-white" href="#">Cookies</a></li>
+          <li><a class="transition hover:text-white" href="#">Sitemap</a></li>
+        </ul>
+        <p class="uppercase tracking-[0.2em]">Made in the USA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    'use strict';
+    /* ================================================================
+       DATA: edit these arrays to update copy, slides, and projects
+    ================================================================ */
+    const SLIDES = [
+      { label: 'The Build Crew', title: 'Web Development', desc: 'Custom-coded sites that load in a blink and turn visitors into customers on every launch, without fail.' },
+      { label: 'The Growth Desk', title: 'Digital Marketing & Strategy', desc: 'Omnichannel digital marketing strategies, paid ad management, SEO, and conversion funnels mapped to your revenue.' },
+      { label: 'The Craft Studio', title: 'Creative', desc: 'UI/UX mockups and design systems that make your business look premium from the very first click.' },
+      { label: 'The Safety Net', title: 'Support', desc: 'Proactive hosting, maintenance, and real humans on call through launch week and long after.' }
+    ];
+
+    const PROJECTS = [
+      { name: 'Nimbus Commerce', cat: 'E-commerce', stack: ['Next.js', 'Shopify', 'Stripe'], layout: 'shop', yr: '2025', a: '#052018', b: '#0E5B3C', acc: '#fff9b2' },
+      { name: 'Atlas Landing', cat: 'Landing Pages', stack: ['React', 'GSAP', 'Vercel'], layout: 'landing', yr: '2025', a: '#0D1526', b: '#23365F', acc: '#8AB4FF' },
+      { name: 'Helix Dashboard', cat: 'Custom Dev', stack: ['React', 'Node.js', 'Postgres'], layout: 'dash', yr: '2024', a: '#1B0E2E', b: '#43206E', acc: '#C9A6FF' },
+      { name: 'Bloom Studio', cat: 'UI/UX', stack: ['Figma', 'React', 'Webflow'], layout: 'uiux', yr: '2024', a: '#2B0E1F', b: '#6E1F47', acc: '#FF9ECD' },
+      { name: 'Vantage Store', cat: 'E-commerce', stack: ['WooCommerce', 'PHP', 'Varnish'], layout: 'shop', yr: '2024', a: '#0B1B2B', b: '#14456B', acc: '#5EC8FF' },
+      { name: 'Keystone Funnels', cat: 'Landing Pages', stack: ['React', 'Vite', 'Plausible'], layout: 'landing', yr: '2024', a: '#06211E', b: '#0F5B50', acc: '#7CF5C8' },
+      { name: 'Meridian Portal', cat: 'Custom Dev', stack: ['Next.js', 'AWS', 'Clerk'], layout: 'dash', yr: '2023', a: '#101624', b: '#2A3B5E', acc: '#FFB03A' },
+      { name: 'Arbor Brand', cat: 'UI/UX', stack: ['Figma', 'Design System', 'Lottie'], layout: 'uiux', yr: '2023', a: '#0F2113', b: '#2C5236', acc: '#fff9b2' },
+      { name: 'Pulse Metrics', cat: 'Custom Dev', stack: ['React', 'D3', 'WebSockets'], layout: 'dash', yr: '2023', a: '#140E2B', b: '#33247A', acc: '#9FF0FF' }
+    ];
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const DUR = 6000;
+
+    /* ================================================================
+       HERO BACKGROUND VIDEO
+    ================================================================ */
+    const heroVid = document.querySelector('#slides video');
+    if (heroVid) {
+      heroVid.play().catch(() => {});
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) heroVid.play().catch(() => {});
+      });
+    }
+
+    /* ================================================================
+       STAT COUNTERS
+    ================================================================ */
+    function animateCount(el) {
+      const target = parseInt(el.dataset.target, 10);
+      const suf = el.dataset.suffix || '';
+      if (prefersReduced) { el.textContent = target + suf; return; }
+      const t0 = performance.now(), dur = 1600;
+      const ease = t => 1 - Math.pow(1 - t, 3);
+      (function tick(now) {
+        const p = Math.min((now - t0) / dur, 1);
+        el.textContent = Math.round(target * ease(p)) + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      })(t0);
+    }
+    const cio = new IntersectionObserver((entries) => entries.forEach(e => {
+      if (e.isIntersecting) { animateCount(e.target); cio.unobserve(e.target); }
+    }), { threshold: 0.6 });
+    document.querySelectorAll('.count').forEach(el => cio.observe(el));
+
+    /* ================================================================
+       REVEAL ON SCROLL
+    ================================================================ */
+    if (prefersReduced) {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+    } else {
+      const rio = new IntersectionObserver((entries) => entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); rio.unobserve(e.target); }
+      }), { threshold: 0.15 });
+      document.querySelectorAll('.reveal').forEach(el => rio.observe(el));
+    }
+
+    /* ================================================================
+       PORTFOLIO WORK WALL: generated SVG mockups + filters
+    ================================================================ */
+    function svgFor(p, i) {
+      const W = '#FFFFFF';
+      const r = (x, y, w, h, o, rad) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="' + (rad == null ? 6 : rad) + '" fill="' + W + '" fill-opacity="' + o + '"/>';
+      const A = (x, y, w, h, rad) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="' + (rad == null ? 8 : rad) + '" fill="' + p.acc + '"/>';
+      let art = '';
+
+      if (p.layout === 'shop') {
+        art = r(16, 44, 116, 96, .14, 10) + r(30, 60, 58, 8, .85, 4) + r(30, 74, 82, 8, .45, 4) + A(30, 92, 52, 16, 8);
+        [146, 268].forEach(x => [44, 96].forEach(y => {
+          art += r(x, y, 116, 44, .12, 8) + r(x + 12, y + 12, 36, 6, .5, 3) + r(x + 12, y + 24, 58, 6, .22, 3);
+        }));
+        [152, 216].forEach((y, ri) => [16, 140, 264].forEach((x, ci) => {
+          const hot = (ri === 1 && ci === 2);
+          art += hot ? A(x, y, 116, 56, 8) : r(x, y, 116, 56, .10, 8);
+          art += r(x + 12, y + 14, 60, 6, hot ? .35 : .30, 3) + r(x + 12, y + 32, 36, 6, hot ? .5 : .16, 3);
+        }));
+      } else if (p.layout === 'landing') {
+        art = r(24, 56, 108, 10, .85, 5) + r(24, 74, 150, 10, .85, 5) + r(24, 92, 120, 8, .4, 4) + r(24, 108, 92, 8, .4, 4) + A(24, 132, 76, 22, 11) + r(24, 166, 120, 7, .3, 3.5);
+        art += r(212, 44, 172, 124, .12, 10) + '<circle cx="296" cy="84" r="18" fill="' + W + '" fill-opacity=".22"/>' + r(228, 106, 80, 8, .5, 4) + r(228, 122, 112, 8, .28, 4);
+        [24, 148, 272].forEach(x => {
+          art += r(x, 192, 112, 92, .10, 8) + r(x + 12, 208, 44, 7, .4, 3.5) + r(x + 12, 226, 70, 7, .18, 3.5);
+        });
+      } else if (p.layout === 'dash') {
+        art = '<rect x="0" y="30" width="64" height="270" fill="#0B0B0D" fill-opacity=".45"/>';
+        art += [52, 68, 84].map((y, k) => '<circle cx="32" cy="' + y + '" r="3.5" fill="' + W + '" fill-opacity="' + (0.5 - k * 0.12) + '"/>').join('');
+        [80, 186, 292].forEach((x, k) => { art += r(x, 44, k === 2 ? 92 : 94, 38, .12, 8) + r(x + 12, 56, 34, 6, .5, 3); });
+        art += r(80, 94, 304, 82, .06, 8);
+        [26, 42, 34, 56, 48, 64, 44, 68, 58, 74, 52, 62].forEach((h, k) => {
+          const x = 92 + k * 23, hot = (k === 5 || k === 9);
+          art += '<rect x="' + x + '" y="' + (160 - h) + '" width="12" height="' + h + '" rx="2" fill="' + (hot ? p.acc : W) + '" fill-opacity="' + (hot ? 1 : 0.5) + '"/>';
+        });
+        art += r(80, 190, 304, 74, .06, 8);
+        [208, 228, 248].forEach(y => { art += r(96, y, 238, 6, .16, 3) + r(348, y - 2, 16, 10, .30, 3); });
+      } else {
+        art = r(24, 64, 118, 10, .85, 5) + r(24, 82, 88, 10, .5, 5) + r(24, 106, 150, 8, .35, 4) + r(24, 122, 120, 8, .35, 4) + A(24, 142, 64, 20, 10);
+        art += [34, 54, 74].map((cx, k) => '<circle cx="' + cx + '" cy="182" r="9" fill="' + W + '" fill-opacity="' + (0.32 - k * 0.08) + '"/>').join('') + r(92, 175, 92, 14, .15, 7);
+        art += '<rect x="248" y="52" width="96" height="192" rx="16" fill="#0B0B0D" fill-opacity=".7" stroke="' + W + '" stroke-opacity=".28"/>';
+        art += r(258, 64, 76, 26, .85, 6) + r(258, 102, 76, 12, .3, 4) + r(258, 122, 54, 12, .3, 4);
+        [[258, 144], [299, 144], [258, 176], [299, 176]].forEach(([x, y]) => { art += r(x, y, 35, 26, .16, 5); });
+        art += A(258, 214, 76, 14, 7);
+      }
+
+      return '<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" class="absolute inset-0 h-full w-full" aria-hidden="true">'
+        + '<defs><linearGradient id="pg' + i + '" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="' + p.a + '"/><stop offset="1" stop-color="' + p.b + '"/></linearGradient></defs>'
+        + '<rect width="400" height="300" fill="url(#pg' + i + ')"/>'
+        + '<rect width="400" height="30" fill="#0B0B0D" fill-opacity=".55"/>'
+        + '<circle cx="16" cy="15" r="4" fill="#FFFFFF" fill-opacity=".55"/><circle cx="32" cy="15" r="4" fill="#FFFFFF" fill-opacity=".4"/><circle cx="48" cy="15" r="4" fill="#FFFFFF" fill-opacity=".28"/>'
+        + '<rect x="64" y="9" width="170" height="12" rx="6" fill="#FFFFFF" fill-opacity=".12"/>'
+        + art + '</svg>';
+    }
+
+    function workCard(p, i) {
+      return '<article class="work-item group">'
+        + '<div class="relative aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-[#15151A]">'
+        + svgFor(p, i)
+        + '<div class="work-overlay absolute inset-0 flex flex-col justify-between bg-ink/85 p-5 backdrop-blur-[2px]">'
+        + '<span class="w-fit rounded-full border border-white/25 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.18em] text-white/85">' + p.cat + '</span>'
+        + '<div>'
+        + '<h3 class="font-display text-xl font-extrabold tracking-tight text-white md:text-2xl">' + p.name + '</h3>'
+        + '<p class="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/50">' + p.stack.join(' · ') + '</p>'
+        + '<a href="#" class="live-link mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-lime" aria-label="View live site: ' + p.name + '">View Live Site <span aria-hidden="true">&rarr;</span></a>'
+        + '</div>'
+        + '</div>'
+        + '</div>'
+        + '<div class="mt-3 flex items-baseline justify-between px-1">'
+        + '<h3 class="text-sm font-bold text-white/90">' + p.name + '</h3>'
+        + '<span class="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/35">' + p.yr + '</span>'
+        + '</div>'
+        + '</article>';
+    }
+
+    const workGrid = document.getElementById('workGrid');
+    const workToggle = document.getElementById('workToggle');
+    let activeFilter = 'All', expanded = false;
+
+    function renderGrid() {
+      const vis = activeFilter === 'All' ? PROJECTS : PROJECTS.filter(p => p.cat === activeFilter);
+      const list = expanded ? vis : vis.slice(0, 6);
+      workGrid.innerHTML = list.map((p, i) => workCard(p, i)).join('');
+      if (vis.length > 6) {
+        workToggle.classList.remove('hidden');
+        workToggle.textContent = expanded ? 'Show Less Work' : 'View All Work (' + vis.length + ')';
+      } else {
+        workToggle.classList.add('hidden');
+      }
+    }
+
+    document.querySelectorAll('.pill').forEach(btn => btn.addEventListener('click', () => {
+      activeFilter = btn.dataset.filter;
+      expanded = false;
+      document.querySelectorAll('.pill').forEach(b => b.classList.toggle('is-active', b === btn));
+      renderGrid();
+    }));
+
+    workToggle.addEventListener('click', () => { expanded = !expanded; renderGrid(); });
+
+    /* Hover overlays (desktop) + tap-to-reveal (touch), delegated so re-renders stay bound */
+    workGrid.addEventListener('click', (e) => {
+      const link = e.target.closest('.live-link');
+      if (link) { e.preventDefault(); return; }
+      const item = e.target.closest('.work-item');
+      if (item && window.matchMedia('(hover: none)').matches && !item.classList.contains('show')) {
+        e.preventDefault();
+        item.classList.add('show');
+      }
+    });
+
+    renderGrid();
+
+    /* ================================================================
+       HEADER + MOBILE MENU
+    ================================================================ */
+    const header = document.getElementById('siteHeader');
+    function onScroll() { header.classList.toggle('is-scrolled', window.scrollY > 24); }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mMenu = document.getElementById('mobileMenu');
+    const iconOpen = document.getElementById('iconOpen');
+    const iconClose = document.getElementById('iconClose');
+
+    function closeMenu() {
+      mMenu.classList.remove('open');
+      document.body.style.overflow = '';
+      menuBtn.setAttribute('aria-expanded', 'false');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    }
+    menuBtn.addEventListener('click', () => {
+      const open = mMenu.classList.toggle('open');
+      document.body.style.overflow = open ? 'hidden' : '';
+      menuBtn.setAttribute('aria-expanded', String(open));
+      iconOpen.classList.toggle('hidden', open);
+      iconClose.classList.toggle('hidden', !open);
+    });
+    mMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+    /* ================================================================
+       INTAKE FORM
+    ================================================================ */
+    const form = document.getElementById('intakeForm');
+    const success = document.getElementById('formSuccess');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      form.classList.add('hidden');
+      success.classList.remove('hidden');
+      success.classList.add('flex');
+      success.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'center' });
+    });
+    document.getElementById('formReset').addEventListener('click', () => {
+      form.reset();
+      success.classList.add('hidden');
+      success.classList.remove('flex');
+      form.classList.remove('hidden');
+    });
+
+    /* Footer year */
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
