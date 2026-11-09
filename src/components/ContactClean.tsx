@@ -20,7 +20,7 @@ export const ContactClean: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="bg-sand/40 py-20 md:py-28 text-ink border-b border-ink/10">
+    <section id="contact" className="bg-sand/40 py-20 md:py-28 text-ink border-b border-ink/10 scroll-mt-20">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-12 items-start">
           
@@ -215,9 +215,21 @@ export const ContactClean: React.FC = () => {
                     <ArrowRight className="w-5 h-5 ml-1 text-lime" />
                   </button>
 
-                  <p className="text-[11px] text-center text-ink/50 pt-1">
-                    ⚡ Fast response within 2–4 hours • Dedicated Texas account manager
-                  </p>
+                  <div className="mt-4 p-3.5 rounded-xl bg-sand/60 border border-ink/10 text-left space-y-1.5 text-xs text-ink/75">
+                    <p className="font-bold text-ink flex items-center gap-1.5">
+                      <ShieldCheck className="w-4 h-4 text-emerald-700 shrink-0" />
+                      What happens after you reach out:
+                    </p>
+                    <p className="text-[11px] leading-tight text-ink/70">
+                      1. Agency Manager Mohomed Niyas confirms your call time within 2-4 business hours.
+                    </p>
+                    <p className="text-[11px] leading-tight text-ink/70">
+                      2. We review your goals and share real examples and pricing for your industry.
+                    </p>
+                    <p className="text-[11px] leading-tight text-ink/70">
+                      3. Zero automated sales calls or aggressive follow-ups.
+                    </p>
+                  </div>
                 </form>
               )}
             </div>

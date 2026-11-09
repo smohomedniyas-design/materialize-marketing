@@ -65,12 +65,12 @@ export const HeroBespoke: React.FC = () => {
     };
   }, []);
 
-  // Slide auto-rotation
+  // Slide auto-rotation (9.5s comfortable reading pace, pauses on interaction)
   useEffect(() => {
     if (!isPlaying) return;
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-    }, 7000);
+    }, 9500);
     return () => clearInterval(interval);
   }, [isPlaying]);
 
@@ -79,6 +79,9 @@ export const HeroBespoke: React.FC = () => {
   return (
     <section
       id="hero"
+      onMouseEnter={() => setIsPlaying(false)}
+      onMouseLeave={() => setIsPlaying(true)}
+      onTouchStart={() => setIsPlaying(false)}
       className="relative min-h-[92vh] w-full overflow-hidden bg-ink flex items-center border-b border-white/10"
       aria-label="Materialize Marketing Hero"
     >
@@ -147,13 +150,11 @@ export const HeroBespoke: React.FC = () => {
                 >
                   Get Free Marketing Guide
                 </a>
+              </div>
 
-                <a
-                  href="#contact"
-                  className="inline-flex items-center justify-center sm:justify-start gap-1 font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-lime hover:text-white transition-colors pt-2 sm:pt-0 sm:ml-2 text-center"
-                >
-                  Schedule Call &rarr;
-                </a>
+              <div className="mt-4 flex items-center gap-2 text-xs text-white/60">
+                <PhoneCall className="w-3.5 h-3.5 text-lime shrink-0" />
+                <span>Prefer to talk? Call <a href="tel:4692157794" className="font-bold text-white hover:text-lime underline decoration-lime/50">(469) 215-7794</a> to speak with our Texas team directly.</span>
               </div>
 
               {/* Interactive Progress Tabs for Human-Crafted Soul */}

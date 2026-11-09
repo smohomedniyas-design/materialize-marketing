@@ -24,7 +24,7 @@ export const PricingClean: React.FC = () => {
         '100% client code and asset ownership — zero lock-in',
       ],
       cta: 'Get Started ($299)',
-      ctaHref: '#contact',
+      ctaHref: '/contact?plan=Starter+$299',
     },
     {
       name: 'Local Growth Engine',
@@ -44,7 +44,7 @@ export const PricingClean: React.FC = () => {
         'Direct phone & text access to dedicated manager (Niyas)',
       ],
       cta: 'Start Growth Engine',
-      ctaHref: '#contact',
+      ctaHref: '/contact?plan=Growth+$497',
     },
     {
       name: 'All-In Marketing & AI Retainer',
@@ -63,18 +63,18 @@ export const PricingClean: React.FC = () => {
         'Bi-weekly strategic review call with our senior agency team',
       ],
       cta: 'Claim All-In Retainer',
-      ctaHref: '#contact',
+      ctaHref: '/contact?plan=All-In+$997',
     },
   ];
 
   const faqs = [
     {
       q: 'Do I own my website and content?',
-      a: 'Yes, 100%. Unlike proprietary website builders that hold your content hostage, you own your domain, your code, your graphics, and all assets we produce.',
+      a: 'Yes, 100%. You own your domain, your content, your branding, and all digital assets. Upon completion of your initial 12-month agreement (or with a $200 buyout), you receive full source code and design files with zero platform lock-in.',
     },
     {
-      q: 'Are there any long-term contracts?',
-      a: 'No. Our monthly packages are month-to-month. We believe in earning your business every single month through measurable outcomes and responsive support.',
+      q: 'How do your contracts and agreements work?',
+      a: 'For our Starter Website build ($299), we bundle a 12-month hosting term at $25/month to keep your upfront investment low (with an optional $200 buyout if you choose to self-host earlier). Our Growth and All-In monthly marketing retainers are 100% month-to-month with no long-term contracts.',
     },
     {
       q: 'What does the $25/month hosting plan include?',

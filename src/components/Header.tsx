@@ -134,13 +134,13 @@ export const Header: React.FC = () => {
               <span>(469) 215-7794</span>
             </a>
 
-            <a
-              href="#free-audit"
+            <Link
+              href="/#free-audit"
               className="btn-primary !py-2.5 !px-5 !text-xs sm:!text-sm whitespace-nowrap shadow-lg shadow-lime/20"
             >
               Get Free Audit
               <ArrowUpRight className="w-4 h-4 ml-0.5" />
-            </a>
+            </Link>
 
             {/* Mobile Menu Button */}
             <button

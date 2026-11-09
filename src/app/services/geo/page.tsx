@@ -27,23 +27,23 @@ export default function GeoServicePage() {
   const geoPillars = [
     {
       icon: Network,
-      title: 'Semantic Entity Graph & Schema',
-      desc: 'We map your business into structured JSON-LD knowledge graphs (Schema.org), defining your exact founders, service offerings, physical locations, and credentials in the machine-readable language LLMs parse.',
+      title: 'Machine-Readable Business Authority',
+      desc: 'We format your business information into structured data code that AI models read effortlessly, defining your exact services, staff credentials, local address, and verified reviews.',
     },
     {
       icon: Database,
-      title: 'LLM Reference Database Citations',
-      desc: 'AI models pull answers from trusted high-authority knowledge bases. We establish your footprint across Wikidata, Crunchbase, certified industry registries, and high-trust citation hubs.',
+      title: 'Trusted AI Citation Networks',
+      desc: 'ChatGPT and Gemini pull recommendations from high-authority local and national databases. We establish your business footprint across certified directories so AI models trust your information.',
     },
     {
       icon: Bot,
-      title: 'Conversational Query Optimization',
-      desc: 'Unlike traditional keywords, AI prompts are full conversational questions. We architect structured Q&A content on your digital properties that directly answer how AI agents query top regional services.',
+      title: 'Conversational Voice & AI Prompts',
+      desc: 'Customers ask AI assistants full sentences like "Who is the most reliable contractor in Prosper?". We optimize your website content to directly answer the exact questions local customers ask AI tools.',
     },
     {
       icon: Sparkles,
-      title: 'Multi-Model Brand Verification',
-      desc: 'We routinely test and benchmark how ChatGPT (OpenAI), Google Gemini, Perplexity, and Claude answer queries about your industry and city, iterating until your business is consistently cited first.',
+      title: 'Continuous AI Search Verification',
+      desc: 'We regularly test and benchmark how ChatGPT, Google Gemini, Perplexity, and Apple Intelligence answer questions about your industry and city, ensuring your brand stays recommended first.',
     },
   ];
 
@@ -177,3 +177,4 @@ export default function GeoServicePage() {
     </div>
   );
 }
+

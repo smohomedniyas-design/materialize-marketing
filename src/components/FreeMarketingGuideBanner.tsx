@@ -15,7 +15,7 @@ export const FreeMarketingGuideBanner: React.FC = () => {
   };
 
   return (
-    <section className="bg-sand/60 border-y border-ink/10 py-14 text-ink">
+    <section id="free-guide" className="bg-sand/60 border-y border-ink/10 py-14 text-ink scroll-mt-20">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="rounded-3xl bg-white border border-ink/10 p-6 sm:p-10 md:p-12 shadow-sm">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-center">

@@ -42,8 +42,8 @@ export default function PaidSocialServicePage() {
     },
     {
       icon: Zap,
-      title: 'Meta Conversions API (CAPI) Integration',
-      desc: 'We configure server-side tracking via Meta CAPI and first-party pixels to bypass iOS tracking loss, ensuring accurate conversion measurement and better ad delivery algorithms.',
+      title: 'Direct Lead & Phone Call Attribution',
+      desc: 'We configure accurate lead tracking and phone call recording so you can see exactly how many inquiries and customers your social ads generate each month.',
     },
   ];
 
@@ -161,3 +161,4 @@ export default function PaidSocialServicePage() {
     </div>
   );
 }
+

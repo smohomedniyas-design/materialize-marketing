@@ -19,7 +19,7 @@ export const OnlineScoreAudit: React.FC = () => {
   };
 
   return (
-    <section id="free-audit" className="relative bg-ink text-white py-20 md:py-28 overflow-hidden border-b border-white/10">
+    <section id="free-audit" className="relative bg-ink text-white py-20 md:py-28 overflow-hidden border-b border-white/10 scroll-mt-20">
       {/* Background ambient accents */}
       <div className="pointer-events-none absolute -top-40 -right-40 h-96 w-96 rounded-full bg-lime/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-emerald-500/10 blur-3xl" />
@@ -119,14 +119,24 @@ export const OnlineScoreAudit: React.FC = () => {
                     Audit Request Received!
                   </h3>
                   <p className="text-sm text-ink/70 max-w-md mx-auto leading-relaxed">
-                    Our team is reviewing <span className="text-pine font-bold">{formData.websiteUrl || formData.businessName}</span>. 
-                    We will email your custom video breakdown and online score checklist within 24 hours.
+                    Agency Manager Mohomed Niyas is reviewing <span className="text-pine font-bold">{formData.websiteUrl || formData.businessName}</span>. 
+                    We will email your 1-page online score card and high-impact recommendation checklist to <span className="font-bold text-ink">{formData.email}</span> within 2 to 4 business hours.
                   </p>
+                  
+                  <div className="pt-2">
+                    <a
+                      href="#free-guide"
+                      className="btn-primary !text-xs !py-2.5 !px-5 inline-flex items-center gap-1.5"
+                    >
+                      <Sparkles className="w-3.5 h-3.5" /> Bonus: Grab the Marketing Guide
+                    </a>
+                  </div>
+
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="btn-ghost !text-ink !border-ink/20 hover:!border-ink text-xs px-5 py-2.5 mt-4"
+                    className="btn-ghost !text-ink !border-ink/20 hover:!border-ink text-xs px-5 py-2 mt-2 block mx-auto"
                   >
-                    Submit Another Website
+                    Check Another Website
                   </button>
                 </div>
               ) : (
@@ -222,9 +232,21 @@ export const OnlineScoreAudit: React.FC = () => {
                     <ArrowRight className="w-5 h-5 ml-1 text-lime" />
                   </button>
 
-                  <p className="text-[11px] text-center text-ink/50 pt-1">
-                    🔒 We respect your privacy. No pushy sales calls. 100% human reviewed.
-                  </p>
+                  <div className="mt-4 p-3.5 rounded-xl bg-sand/60 border border-ink/10 text-left space-y-1.5 text-xs text-ink/75">
+                    <p className="font-bold text-ink flex items-center gap-1.5">
+                      <ShieldCheck className="w-4 h-4 text-emerald-700 shrink-0" />
+                      What happens after you submit:
+                    </p>
+                    <p className="text-[11px] leading-tight text-ink/70">
+                      1. Agency Manager Mohomed Niyas personally reviews your site within 2-4 business hours.
+                    </p>
+                    <p className="text-[11px] leading-tight text-ink/70">
+                      2. We email a clean 1-page PDF score with mobile speed and Google ranking checks.
+                    </p>
+                    <p className="text-[11px] leading-tight text-ink/70">
+                      3. Zero robotic sales calls. 100% human, no-pressure advice.
+                    </p>
+                  </div>
                 </form>
               )}
             </div>

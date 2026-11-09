@@ -28,22 +28,22 @@ export default function WebDevServicePage() {
           </Link>
           <div className="max-w-3xl">
             <span className="font-display text-xs font-extrabold uppercase tracking-[0.25em] text-white/50">
-              Discipline 01
+              Discipline 01 · Digital Foundation
             </span>
             <h1 className="font-display text-4xl font-black tracking-tight sm:text-5xl md:text-6xl mt-2">
-              Custom <span className="text-lime">Web Development</span>
+              Custom <span className="text-lime">Web Design &amp; Development</span>
             </h1>
             <p className="mt-5 text-lg text-white/75 leading-relaxed">
-              We engineer custom web applications using modern Next.js App Router, React 19, and TypeScript.
-              Zero bloated page builders, zero fragile WordPress plugins - just lightning speed and rock-solid code.
+              We design and code custom websites that load in under 1 second, look stunning on every phone,
+              and turn casual visitors into paying customers. No fragile templates, no tech headaches — just clean performance.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/contact?type=Web+Development" className="btn-primary">
-                Start Web Dev Project
+                Start Your Website ($299)
                 <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
               <Link href="/pricing" className="btn-ghost">
-                View Pricing Packages
+                View Pricing ($25/mo hosting)
               </Link>
             </div>
           </div>
@@ -57,13 +57,12 @@ export default function WebDevServicePage() {
             <div className="lg:col-span-8 space-y-10">
               <div>
                 <h2 className="section-h2 text-3xl md:text-4xl">
-                  Engineering That Doesn&apos;t Cut Corners.
+                  Websites Built to Make Your Phone Ring.
                 </h2>
                 <p className="mt-4 text-base text-ink/70 leading-relaxed">
-                  Most agency websites look okay on surface level but struggle under real traffic. We treat
-                  every website as a mission-critical web application. We configure edge CDN caching, image
-                  optimization pipelines, serverless functions, and structured data schema so search engines
-                  and customers both love your site.
+                  Most agency websites look okay on surface level but are slow to load on mobile and fail to capture leads.
+                  We treat your website as your business&apos;s #1 sales asset: fast load times, clear call buttons,
+                  instant appointment booking, and local search optimization so customers call you instead of your competitors.
                 </p>
               </div>
 
@@ -73,36 +72,36 @@ export default function WebDevServicePage() {
                   <div className="grid h-10 w-10 place-items-center rounded-lg bg-lime text-ink mb-4">
                     <Rocket className="w-5 h-5" />
                   </div>
-                  <h3 className="font-display font-extrabold text-lg">95+ Core Web Vitals</h3>
+                  <h3 className="font-display font-extrabold text-lg">Sub-1-Second Mobile Speed</h3>
                   <p className="text-xs text-ink/65 mt-2">
-                    Sub-second Largest Contentful Paint (LCP) and zero Cumulative Layout Shift (CLS) for maximal Google rankings.
+                    Loads in a blink on iPhones, Androids, and desktops so impatient local buyers never bounce to a competitor.
                   </p>
                 </div>
                 <div className="p-6 rounded-2xl border border-ink/10 bg-white">
                   <div className="grid h-10 w-10 place-items-center rounded-lg bg-lime text-ink mb-4">
                     <Code2 className="w-5 h-5" />
                   </div>
-                  <h3 className="font-display font-extrabold text-lg">Next.js &amp; TypeScript</h3>
+                  <h3 className="font-display font-extrabold text-lg">Google Rank Foundation</h3>
                   <p className="text-xs text-ink/65 mt-2">
-                    Modern component architecture with strict typing, easy maintenance, and seamless team onboarding.
+                    Clean semantic structure and local schema built into every page to give your business maximum visibility on Google Search.
                   </p>
                 </div>
                 <div className="p-6 rounded-2xl border border-ink/10 bg-white">
                   <div className="grid h-10 w-10 place-items-center rounded-lg bg-lime text-ink mb-4">
                     <Cpu className="w-5 h-5" />
                   </div>
-                  <h3 className="font-display font-extrabold text-lg">Headless CMS Freedom</h3>
+                  <h3 className="font-display font-extrabold text-lg">Hassle-Free Updates</h3>
                   <p className="text-xs text-ink/65 mt-2">
-                    Connect to Sanity, Contentful, or Strapi. Your marketing team edits content easily without touching code.
+                    Need new team members added, photos swapped, or menus updated? Message us anytime and we handle it for you.
                   </p>
                 </div>
                 <div className="p-6 rounded-2xl border border-ink/10 bg-white">
                   <div className="grid h-10 w-10 place-items-center rounded-lg bg-lime text-ink mb-4">
                     <Globe className="w-5 h-5" />
                   </div>
-                  <h3 className="font-display font-extrabold text-lg">Global Edge Deployment</h3>
+                  <h3 className="font-display font-extrabold text-lg">100% Client Ownership</h3>
                   <p className="text-xs text-ink/65 mt-2">
-                    Deployed across 300+ worldwide edge locations via Vercel or Cloudflare for instantaneous response globally.
+                    You own your domain, your content, and all website assets completely. Zero proprietary platform traps or lock-in.
                   </p>
                 </div>
               </div>
