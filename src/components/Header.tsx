@@ -42,15 +42,15 @@ export const Header: React.FC = () => {
   return (
     <>
       {/* Top Utility Trust Bar */}
-      <div className="bg-slate-900 text-slate-200 text-xs py-2 px-4 border-b border-slate-800">
+      <div className="bg-[#0b1715] text-white/80 text-xs py-2 px-4 border-b border-white/10 z-50 relative">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <div className="flex items-center gap-4">
-            <span className="inline-flex items-center gap-1.5 text-slate-300">
-              <MapPin className="w-3.5 h-3.5 text-blue-400" />
+            <span className="inline-flex items-center gap-1.5 text-white/90">
+              <MapPin className="w-3.5 h-3.5 text-lime" />
               <span>Prosper, TX &amp; Dallas-Fort Worth</span>
             </span>
-            <span className="hidden sm:inline-flex items-center gap-1.5 text-slate-400 border-l border-slate-700 pl-4">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+            <span className="hidden sm:inline-flex items-center gap-1.5 text-white/60 border-l border-white/15 pl-4">
+              <ShieldCheck className="w-3.5 h-3.5 text-lime" />
               <span>Backed by Sands Planning Group</span>
             </span>
           </div>
@@ -58,22 +58,24 @@ export const Header: React.FC = () => {
           <div className="flex items-center gap-4">
             <a
               href="tel:4692157794"
-              className="inline-flex items-center gap-1.5 font-bold text-white hover:text-blue-400 transition-colors"
+              className="inline-flex items-center gap-1.5 font-bold text-white hover:text-lime transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-blue-400" />
+              <Phone className="w-3.5 h-3.5 text-lime" />
               <span>(469) 215-7794</span>
             </a>
-            <span className="hidden md:inline text-slate-500">|</span>
-            <span className="hidden md:inline text-slate-300">Mon - Fri: 8am - 6pm CST</span>
+            <span className="hidden md:inline text-white/30">|</span>
+            <span className="hidden md:inline text-white/70">Mon - Fri: 8am - 6pm CST</span>
           </div>
         </div>
       </div>
 
-      {/* Main Sticky Header */}
+      {/* Main Glassmorphic Sticky Header */}
       <header
         id="siteHeader"
-        className={`sticky top-0 z-50 transition-all duration-200 bg-white/95 backdrop-blur-md border-b border-slate-200/90 ${
-          isScrolled ? 'py-3 shadow-md' : 'py-4'
+        className={`sticky top-0 z-50 transition-all duration-300 ${
+          isScrolled || mobileMenuOpen
+            ? 'bg-ink/95 backdrop-blur-md border-b border-white/10 py-3 shadow-xl'
+            : 'bg-ink/75 backdrop-blur-sm border-b border-white/5 py-4'
         }`}
       >
         <nav
@@ -82,20 +84,20 @@ export const Header: React.FC = () => {
         >
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group" aria-label="Materialize Marketing Home">
-            <span className="relative grid h-10 w-10 place-items-center rounded-xl bg-blue-600 p-1.5 shadow-sm transition-transform duration-200 group-hover:scale-105">
+            <span className="relative grid h-10 w-10 place-items-center rounded-xl bg-lime p-1.5 shadow-md transition-transform duration-300 group-hover:scale-105">
               <img
                 src="/images/logo.png"
                 alt="Materialize Marketing Logo"
-                className="h-full w-full object-contain brightness-0 invert"
+                className="h-full w-full object-contain"
                 width={36}
                 height={36}
               />
             </span>
             <span className="leading-tight">
-              <span className="block font-display text-lg font-black tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors">
+              <span className="block font-display text-lg font-black tracking-tight text-white group-hover:text-lime transition-colors">
                 MATERIALIZE
               </span>
-              <span className="block text-[10px] font-extrabold uppercase tracking-[0.24em] text-blue-600">
+              <span className="block text-[9px] font-extrabold uppercase tracking-[0.28em] text-lime/90">
                 Marketing
               </span>
             </span>
@@ -109,10 +111,10 @@ export const Header: React.FC = () => {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className={`transition-colors duration-150 ${
+                    className={`transition-colors duration-200 ${
                       isActive
-                        ? 'text-blue-600 font-bold'
-                        : 'text-slate-700 hover:text-blue-600'
+                        ? 'text-lime font-bold'
+                        : 'text-white/80 hover:text-white'
                     }`}
                   >
                     {item.label}
@@ -126,15 +128,15 @@ export const Header: React.FC = () => {
           <div className="flex items-center gap-3">
             <a
               href="tel:4692157794"
-              className="hidden xl:inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 px-3.5 py-2 rounded-lg transition-colors"
+              className="hidden xl:inline-flex items-center gap-1.5 text-xs font-bold text-white bg-white/10 hover:bg-white/20 px-3.5 py-2 rounded-full border border-white/15 transition-all"
             >
-              <Phone className="w-3.5 h-3.5 text-blue-600" />
+              <Phone className="w-3.5 h-3.5 text-lime" />
               <span>(469) 215-7794</span>
             </a>
 
             <a
               href="#free-audit"
-              className="btn-primary !py-2.5 !px-5 !text-xs sm:!text-sm whitespace-nowrap"
+              className="btn-primary !py-2.5 !px-5 !text-xs sm:!text-sm whitespace-nowrap shadow-lg shadow-lime/20"
             >
               Get Free Audit
               <ArrowUpRight className="w-4 h-4 ml-0.5" />
@@ -144,7 +146,7 @@ export const Header: React.FC = () => {
             <button
               id="menuBtn"
               onClick={toggleMobileMenu}
-              className="grid h-10 w-10 place-items-center rounded-lg border border-slate-300 text-slate-800 lg:hidden hover:border-blue-600 hover:text-blue-600 transition-colors"
+              className="grid h-10 w-10 place-items-center rounded-lg border border-white/20 text-white lg:hidden hover:border-lime hover:text-lime transition-colors"
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileMenuOpen}
             >
@@ -157,21 +159,21 @@ export const Header: React.FC = () => {
       {/* Mobile Drawer Menu */}
       <div
         id="mobileMenu"
-        className={`fixed inset-0 z-40 bg-white overflow-y-auto transition-all duration-300 lg:hidden ${
+        className={`fixed inset-0 z-40 bg-ink overflow-y-auto transition-all duration-300 lg:hidden ${
           mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
         }`}
         aria-label="Mobile navigation"
       >
         <div className="min-h-full flex flex-col justify-between p-6 pt-28 pb-8 max-w-md mx-auto">
           <div>
-            <div className="mb-6 p-4 rounded-xl bg-blue-50 border border-blue-100 text-center">
-              <p className="text-xs font-bold text-blue-900 uppercase tracking-wider">Direct Assistance</p>
-              <a href="tel:4692157794" className="mt-1 inline-flex items-center gap-2 text-lg font-black text-blue-600">
-                <Phone className="w-4 h-4" /> (469) 215-7794
+            <div className="mb-6 p-4 rounded-xl bg-white/5 border border-white/10 text-center">
+              <p className="text-xs font-bold text-lime uppercase tracking-wider">Direct Texas Assistance</p>
+              <a href="tel:4692157794" className="mt-1 inline-flex items-center gap-2 text-lg font-black text-white hover:text-lime transition-colors">
+                <Phone className="w-4 h-4 text-lime" /> (469) 215-7794
               </a>
             </div>
 
-            <ul className="flex flex-col gap-3 font-display text-xl font-bold text-slate-900">
+            <ul className="flex flex-col gap-3 font-display text-xl font-bold text-white">
               {navLinks.map((item) => (
                 <li key={item.label}>
                   <Link
@@ -180,7 +182,7 @@ export const Header: React.FC = () => {
                       setMobileMenuOpen(false);
                       document.body.style.overflow = '';
                     }}
-                    className="block py-2.5 px-3 rounded-lg hover:bg-slate-50 text-slate-800 hover:text-blue-600 transition-colors"
+                    className="block py-2.5 px-3 rounded-lg hover:bg-white/10 text-white/90 hover:text-lime transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -188,7 +190,7 @@ export const Header: React.FC = () => {
               ))}
             </ul>
 
-            <div className="mt-6 pt-6 border-t border-slate-200">
+            <div className="mt-6 pt-6 border-t border-white/10">
               <a
                 href="#free-audit"
                 onClick={() => {
@@ -197,15 +199,15 @@ export const Header: React.FC = () => {
                 }}
                 className="btn-primary w-full text-center justify-center py-3.5 font-bold"
               >
-                Check Your Online Score (Free)
+                Check Your Online Score (Free Audit)
               </a>
             </div>
           </div>
 
-          <div className="pt-6 mt-6 border-t border-slate-200 text-center text-xs text-slate-500">
-            <p className="font-semibold text-slate-700">Materialize Marketing</p>
+          <div className="pt-6 mt-6 border-t border-white/10 text-center text-xs text-white/50">
+            <p className="font-semibold text-white">Materialize Marketing</p>
             <p className="mt-1">Prosper, Texas • hello@materializem.com</p>
-            <p className="mt-1 text-slate-400">Under Sands Planning Group</p>
+            <p className="mt-1 text-lime/80 font-medium">Under Sands Planning Group</p>
           </div>
         </div>
       </div>

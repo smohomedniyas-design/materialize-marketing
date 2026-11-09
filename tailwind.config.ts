@@ -10,22 +10,17 @@ const config: Config = {
     extend: {
       colors: {
         accent: {
-          DEFAULT: "#2563EB",
-          light: "#3B82F6",
-          dark: "#1D4ED8",
+          DEFAULT: "#fff9b2",
+          light: "#fffde6",
+          dark: "#f2ea99",
         },
         brand: {
-          navy: "#0F172A",     // Authoritative deep slate navy
-          blue: "#2563EB",     // Skol-style vibrant primary action blue
-          blueHover: "#1D4ED8",
-          sky: "#0284C7",
-          emerald: "#059669",  // Growth & verified badge green
-          emeraldLight: "#ECFDF5",
-          amber: "#D97706",    // Star ratings & warm trust gold
-          amberLight: "#FEF3C7",
-          surface: "#F8FAFC",  // Soft light background
-          card: "#FFFFFF",
-          border: "#E2E8F0",
+          navy: "#0F172A",
+          blue: "#2563EB",
+          emerald: "#10B981",
+          amber: "#F59E0B",
+          lime: "#fff9b2",
+          spruce: "#122522",
         },
         pine: {
           DEFAULT: "#274a44",
@@ -33,12 +28,12 @@ const config: Config = {
           dark: "#1c3732",
           deep: "#122522",
         },
-        // Core semantic tokens mapped to company colors:
-        lime: "#2563EB", // Map lime to vibrant brand blue for high-contrast visibility
-        ink: "#0F172A",  // High-legibility deep slate
-        coal: "#1E293B", // Rich slate surface
-        paper: "#FFFFFF", // Clean crisp white page
-        sand: "#F1F5F9",  // Subtle light slate border/divider
+        // Signature Materialize Marketing editorial tokens:
+        lime: "#fff9b2", // Iconic electric accent
+        ink: "#122522",  // Midnight spruce foundation
+        coal: "#17302c", // Rich surface
+        paper: "#FAF9F5", // Clean editorial paper
+        sand: "#EDEAE0",  // Warm subtle sand border
       },
       fontFamily: {
         display: ["Archivo", "ui-sans-serif", "system-ui", "sans-serif"],

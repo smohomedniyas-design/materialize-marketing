@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
-import { Check, HelpCircle, ArrowRight, Sparkles, ChevronDown } from 'lucide-react';
+import { Check, ChevronDown } from 'lucide-react';
 
 export const PricingClean: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -10,46 +9,46 @@ export const PricingClean: React.FC = () => {
   const tiers = [
     {
       name: 'Starter Website & Hosting',
-      tagline: 'Best for local shops, contractors, and startups needing a clean online presence.',
+      tagline: 'Best for local businesses, shops, and startups needing a clean online presence.',
       price: '$299',
       period: 'setup + $25/month',
       popular: false,
-      badge: 'Transparent Value',
+      badge: 'Launch Foundation',
       features: [
         'Custom 3 to 5-page responsive website',
-        'Lightning-fast page load (< 1s)',
-        'Domain setup & free SSL certificate included',
-        'Google Analytics & contact form integration',
-        'High-speed cloud hosting ($25/mo)',
-        '2 monthly content/image updates included',
-        '100% full code & asset ownership',
+        'Sub-second page speed (< 1s) on phones & desktops',
+        'Custom domain setup & free SSL security certificate',
+        'Google Analytics & conversion contact form integration',
+        'Managed cloud hosting ($25/mo) with 99.9% uptime',
+        '2 monthly content, text, or photo updates included',
+        '100% client code and asset ownership — zero lock-in',
       ],
       cta: 'Get Started ($299)',
       ctaHref: '#contact',
     },
     {
       name: 'Local Growth Engine',
-      tagline: 'Best for businesses that want more phone calls and top rankings on Google.',
+      tagline: 'Best for businesses wanting top rankings on Google and a steady flow of calls.',
       price: '$497',
       period: 'per month',
       popular: true,
       badge: 'Most Popular',
       features: [
-        'Everything in Starter Website included',
+        'Everything in Starter Website & Hosting included',
         'Google Business Profile (GBP) complete optimization',
         'Local SEO: Rank in the Google Maps Top 3 Pack',
-        'Automated 5-star Google review collection system',
+        'Generative Engine Optimization (GEO) for ChatGPT & AI search',
+        'Automated 5-star Google review generation workflow',
         'Local citation syndication across 40+ business directories',
-        'Monthly keyword ranking & lead conversion report',
-        'Unlimited minor text and photo updates',
-        'Direct phone & text access to your dedicated manager (Niyas)',
+        'Monthly keyword ranking & lead conversion reports',
+        'Direct phone & text access to dedicated manager (Niyas)',
       ],
       cta: 'Start Growth Engine',
       ctaHref: '#contact',
     },
     {
       name: 'All-In Marketing & AI Retainer',
-      tagline: 'Best for established businesses wanting an entire outsourced marketing department.',
+      tagline: 'Best for established brands seeking an entire outsourced marketing department.',
       price: '$997',
       period: 'per month',
       popular: false,
@@ -58,10 +57,10 @@ export const PricingClean: React.FC = () => {
         'Everything in Growth Engine included',
         'Hands-Free Social Media: 16 custom branded posts/mo',
         'Instagram, Facebook & TikTok graphic/video creation',
+        'Paid Ads Management (Google Ads Search or Meta Social)',
         '24/7 AI Voice Phone Receptionist (missed call text-back)',
-        '24/7 AI Website Chatbot trained on your exact business FAQ',
-        'Paid Ads Funnel Management (Google Ads or Meta)',
-        'Bi-weekly strategy call with our agency team',
+        '24/7 Website AI Chat Assistant trained on your business FAQ',
+        'Bi-weekly strategic review call with our senior agency team',
       ],
       cta: 'Claim All-In Retainer',
       ctaHref: '#contact',
@@ -71,40 +70,37 @@ export const PricingClean: React.FC = () => {
   const faqs = [
     {
       q: 'Do I own my website and content?',
-      a: 'Yes, 100%. Unlike some proprietary platforms that lock you in, you own your domain, your content, your code, and all graphics we create for you.',
+      a: 'Yes, 100%. Unlike proprietary website builders that hold your content hostage, you own your domain, your code, your graphics, and all assets we produce.',
     },
     {
       q: 'Are there any long-term contracts?',
-      a: 'No. Our monthly packages are month-to-month. We believe in earning your business every single month through measurable results and great service.',
+      a: 'No. Our monthly packages are month-to-month. We believe in earning your business every single month through measurable outcomes and responsive support.',
     },
     {
       q: 'What does the $25/month hosting plan include?',
-      a: 'It includes ultra-fast cloud hosting, automatic daily backups, enterprise SSL certificates, 99.9% uptime monitoring, and ongoing security patches so you never have to worry about your site crashing.',
+      a: 'It includes high-speed cloud hosting on enterprise networks, automated daily backups, SSL encryption, 99.9% uptime monitoring, and direct human assistance for minor updates.',
     },
     {
       q: 'How fast can our new website be launched?',
-      a: 'Our standard turnaround is 14 business days from the initial discovery call. If you have your copy and images ready, we can often launch even faster.',
+      a: 'Our standard turnaround is 14 business days from your initial discovery call. If you have your copy and images ready, we can often launch even faster.',
     },
     {
-      q: 'Who will I be talking to when I need help?',
-      a: 'You will have direct access to your dedicated Texas-based account manager, Mohomed Niyas, via phone, email, and direct text. No overseas call centers, no robot tickets.',
+      q: 'Who will be my point of contact?',
+      a: 'You will work directly with our agency manager, Mohomed Niyas, and lead designer Rusith. No call centers, no outsourced support tickets.',
     },
   ];
 
   return (
-    <section id="pricing" className="bg-white py-20 md:py-28 border-b border-slate-200/80">
+    <section id="pricing" className="bg-paper py-20 md:py-28 text-ink border-b border-ink/10">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-200 px-3.5 py-1 mb-4">
-            <span className="text-xs font-bold text-blue-900 uppercase tracking-widest">
-              Simple, Flat Pricing
-            </span>
-          </div>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-            Transparent Rates. Zero Surprise Invoices.
+          <p className="eyebrow text-ink/50 justify-center">Transparent Pricing</p>
+          <h2 className="section-h2 mt-4 text-ink">
+            Predictable Flat Rates. Zero Surprise Invoices.
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600">
+          <p className="mt-4 text-base md:text-lg text-ink/70">
             Choose the package that fits your stage of business. Change or cancel anytime.
           </p>
         </div>
@@ -116,20 +112,20 @@ export const PricingClean: React.FC = () => {
               key={tier.name}
               className={`relative flex flex-col justify-between rounded-2xl p-8 transition-all duration-300 ${
                 tier.popular
-                  ? 'bg-blue-600 text-white shadow-2xl shadow-blue-500/25 ring-2 ring-blue-600 lg:-translate-y-2'
-                  : 'bg-slate-50 text-slate-900 border border-slate-200 shadow-sm hover:shadow-md'
+                  ? 'bg-ink text-white shadow-2xl ring-2 ring-lime lg:-translate-y-2'
+                  : 'bg-white text-ink border border-ink/10 shadow-sm hover:shadow-md'
               }`}
             >
               {tier.popular && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-amber-400 px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-slate-900 shadow-sm">
-                  ★ Most Popular For Local Businesses
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-lime px-4 py-1 text-[11px] font-black uppercase tracking-wider text-ink shadow-sm">
+                  ★ Most Popular For Local Growth
                 </div>
               )}
 
               <div>
                 <span
                   className={`inline-block text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md ${
-                    tier.popular ? 'bg-blue-700 text-blue-100' : 'bg-slate-200 text-slate-700'
+                    tier.popular ? 'bg-white/10 text-lime' : 'bg-sand text-ink/70'
                   }`}
                 >
                   {tier.badge}
@@ -138,7 +134,7 @@ export const PricingClean: React.FC = () => {
                 <h3 className="mt-4 font-display text-2xl font-black tracking-tight">
                   {tier.name}
                 </h3>
-                <p className={`mt-2 text-xs leading-relaxed ${tier.popular ? 'text-blue-100' : 'text-slate-500'}`}>
+                <p className={`mt-2 text-xs leading-relaxed ${tier.popular ? 'text-white/70' : 'text-ink/60'}`}>
                   {tier.tagline}
                 </p>
 
@@ -146,7 +142,7 @@ export const PricingClean: React.FC = () => {
                   <span className="font-display text-5xl font-black tracking-tight">
                     {tier.price}
                   </span>
-                  <span className={`text-xs font-bold ${tier.popular ? 'text-blue-100' : 'text-slate-500'}`}>
+                  <span className={`text-xs font-bold ${tier.popular ? 'text-lime' : 'text-ink/60'}`}>
                     {tier.period}
                   </span>
                 </div>
@@ -156,10 +152,10 @@ export const PricingClean: React.FC = () => {
                     <li key={i} className="flex items-start gap-2.5">
                       <Check
                         className={`w-4 h-4 shrink-0 mt-0.5 ${
-                          tier.popular ? 'text-blue-200' : 'text-emerald-600'
+                          tier.popular ? 'text-lime' : 'text-pine'
                         }`}
                       />
-                      <span className={tier.popular ? 'text-white' : 'text-slate-700'}>{f}</span>
+                      <span className={tier.popular ? 'text-white/90' : 'text-ink/80'}>{f}</span>
                     </li>
                   ))}
                 </ul>
@@ -168,10 +164,10 @@ export const PricingClean: React.FC = () => {
               <div className="mt-8 pt-6 border-t border-current/15">
                 <a
                   href={tier.ctaHref}
-                  className={`w-full block text-center py-3.5 px-6 rounded-xl font-bold text-sm transition-all duration-200 ${
+                  className={`w-full block text-center py-3.5 px-6 rounded-full font-bold text-sm transition-all duration-200 ${
                     tier.popular
-                      ? 'bg-white text-blue-700 hover:bg-blue-50 shadow-md'
-                      : 'bg-blue-600 text-white hover:bg-blue-700 shadow-sm'
+                      ? 'bg-lime text-ink hover:bg-white shadow-lg'
+                      : 'bg-ink text-lime hover:bg-pine shadow-sm'
                   }`}
                 >
                   {tier.cta}
@@ -183,7 +179,7 @@ export const PricingClean: React.FC = () => {
 
         {/* Small Business FAQ Section */}
         <div className="mt-20 max-w-3xl mx-auto">
-          <h3 className="font-display text-2xl font-black text-slate-900 text-center mb-8">
+          <h3 className="font-display text-2xl font-black text-ink text-center mb-8">
             Frequently Asked Questions
           </h3>
 
@@ -193,21 +189,21 @@ export const PricingClean: React.FC = () => {
               return (
                 <div
                   key={idx}
-                  className="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden transition-colors"
+                  className="rounded-xl border border-ink/10 bg-white overflow-hidden transition-colors"
                 >
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    className="w-full flex items-center justify-between p-5 text-left font-bold text-slate-900 text-sm sm:text-base hover:text-blue-600"
+                    className="w-full flex items-center justify-between p-5 text-left font-bold text-ink text-sm sm:text-base hover:text-pine"
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
-                      className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-200 ${
-                        isOpen ? 'rotate-180 text-blue-600' : ''
+                      className={`w-5 h-5 text-ink/40 shrink-0 transition-transform duration-200 ${
+                        isOpen ? 'rotate-180 text-pine' : ''
                       }`}
                     />
                   </button>
                   {isOpen && (
-                    <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/50">
+                    <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-ink/70 leading-relaxed border-t border-ink/5">
                       {faq.a}
                     </div>
                   )}
@@ -216,6 +212,7 @@ export const PricingClean: React.FC = () => {
             })}
           </div>
         </div>
+
       </div>
     </section>
   );

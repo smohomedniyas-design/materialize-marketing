@@ -1,15 +1,16 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import { CLIENT_LOGOS } from '@/data/siteData';
 
 export const ClientMarquee: React.FC = () => {
-  // Repeat the 6 websites we did to form a wide continuous marquee track
   const loopItems = [...CLIENT_LOGOS, ...CLIENT_LOGOS];
 
   return (
-    <section className="border-b border-slate-200/90 bg-slate-50 py-7 md:py-8 overflow-hidden" aria-label="Our client websites">
-      <p className="text-center text-xs font-bold uppercase tracking-[0.22em] text-slate-500">
-        Trusted By Growing Brands &amp; Local Leaders
+    <section className="border-b border-white/10 bg-coal py-7 md:py-8 overflow-hidden" aria-label="Our client platforms">
+      <p className="text-center text-[11px] font-extrabold uppercase tracking-[0.25em] text-white/50">
+        Live Websites &amp; Platforms We Launched
       </p>
       <div className="marquee mt-5">
         <div className="marquee-track flex w-max">
@@ -21,10 +22,10 @@ export const ClientMarquee: React.FC = () => {
                   href={`/work/${client.slug}`}
                   className="group inline-flex items-center gap-3"
                 >
-                  <span className="font-display text-lg font-black uppercase tracking-wider text-slate-400 transition-colors group-hover:text-blue-600 md:text-xl cursor-pointer">
+                  <span className="font-display text-lg font-black uppercase tracking-wider text-white/40 transition-colors group-hover:text-lime md:text-xl cursor-pointer">
                     {client.name}
                   </span>
-                  <span className="rounded-full bg-slate-200/80 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-600 group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+                  <span className="rounded-full bg-white/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white/60 group-hover:bg-lime group-hover:text-ink transition-colors">
                     {client.category}
                   </span>
                 </Link>
@@ -40,10 +41,10 @@ export const ClientMarquee: React.FC = () => {
                   tabIndex={-1}
                   className="group inline-flex items-center gap-3"
                 >
-                  <span className="font-display text-lg font-black uppercase tracking-wider text-slate-400 transition-colors group-hover:text-blue-600 md:text-xl cursor-pointer">
+                  <span className="font-display text-lg font-black uppercase tracking-wider text-white/40 transition-colors group-hover:text-lime md:text-xl cursor-pointer">
                     {client.name}
                   </span>
-                  <span className="rounded-full bg-slate-200/80 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-600 group-hover:bg-blue-100 group-hover:text-blue-700 transition-colors">
+                  <span className="rounded-full bg-white/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white/60 group-hover:bg-lime group-hover:text-ink transition-colors">
                     {client.category}
                   </span>
                 </Link>

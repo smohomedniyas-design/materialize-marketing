@@ -7,13 +7,13 @@ export const ProcessClean: React.FC = () => {
   const steps = [
     {
       num: '01',
-      title: '15-Minute Discovery & Free Audit',
+      title: '15-Minute Discovery & Audit',
       timeframe: 'Day 1',
       icon: Coffee,
-      desc: 'We hop on a quick, casual call to understand your business, your target customers, and where your current online presence is losing leads. No high-pressure sales tactics — just clear, actionable guidance.',
+      desc: 'We hop on a casual call to understand your business, your target customers, and where your current online presence is losing leads. No sales tactics — just clear, actionable guidance.',
       deliverables: [
         'Complete website & Google Maps audit',
-        'Competitor review in your local city',
+        'Competitor review in your local area',
         'Clear flat-rate quote with zero hidden fees',
       ],
     },
@@ -44,19 +44,16 @@ export const ProcessClean: React.FC = () => {
   ];
 
   return (
-    <section id="process" className="bg-white py-20 md:py-28 border-b border-slate-200/80">
+    <section id="process" className="bg-paper py-20 md:py-28 text-ink border-b border-ink/10">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-200 px-3.5 py-1 mb-4">
-            <span className="text-xs font-bold text-blue-900 uppercase tracking-widest">
-              Simple 3-Step Process
-            </span>
-          </div>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+          <p className="eyebrow text-ink/50 justify-center">The 3-Step Roadmap</p>
+          <h2 className="section-h2 mt-4 text-ink">
             How We Take the Stress Out of Marketing.
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+          <p className="mt-4 text-base md:text-lg text-ink/70 leading-relaxed">
             Most agencies disappear after you pay them. At Materialize Marketing, you get a clear 14-day timeline and a dedicated team in your timezone.
           </p>
         </div>
@@ -68,40 +65,40 @@ export const ProcessClean: React.FC = () => {
             return (
               <div
                 key={st.num}
-                className="relative flex flex-col justify-between rounded-2xl bg-slate-50 p-8 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/30 transition-all duration-200 shadow-sm"
+                className="relative flex flex-col justify-between rounded-2xl bg-white p-8 border border-ink/10 hover:border-ink/30 transition-all duration-300 shadow-sm hover:shadow-lg"
               >
                 <div>
                   {/* Step Number & Timeframe */}
-                  <div className="flex items-center justify-between pb-4 border-b border-slate-200/60">
-                    <span className="font-display text-3xl font-black text-blue-600">
+                  <div className="flex items-center justify-between pb-4 border-b border-ink/5">
+                    <span className="font-display text-3xl font-black text-pine">
                       {st.num}
                     </span>
-                    <span className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">
-                      <Clock className="w-3.5 h-3.5 text-blue-500" />
+                    <span className="inline-flex items-center gap-1.5 text-xs font-bold text-ink/70 bg-sand px-3 py-1 rounded-full border border-ink/10">
+                      <Clock className="w-3.5 h-3.5 text-pine" />
                       {st.timeframe}
                     </span>
                   </div>
 
                   {/* Icon & Title */}
                   <div className="mt-6 flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-xl bg-blue-100 text-blue-700 grid place-items-center">
+                    <div className="h-10 w-10 rounded-xl bg-ink text-lime grid place-items-center">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <h3 className="font-display text-xl font-black text-slate-900 leading-snug">
+                    <h3 className="font-display text-xl font-black text-ink leading-snug">
                       {st.title}
                     </h3>
                   </div>
 
                   {/* Description */}
-                  <p className="mt-4 text-sm text-slate-600 leading-relaxed">
+                  <p className="mt-4 text-xs sm:text-sm text-ink/70 leading-relaxed">
                     {st.desc}
                   </p>
 
                   {/* Deliverables Checklist */}
-                  <ul className="mt-6 space-y-2 border-t border-slate-200/60 pt-4">
+                  <ul className="mt-6 space-y-2 border-t border-ink/5 pt-4">
                     {st.deliverables.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-xs text-slate-700">
-                        <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <li key={idx} className="flex items-start gap-2 text-xs text-ink/80">
+                        <Check className="w-4 h-4 text-pine shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -116,15 +113,16 @@ export const ProcessClean: React.FC = () => {
         <div className="mt-14 text-center">
           <a
             href="#contact"
-            className="btn-primary text-base font-bold px-8 py-4 shadow-lg shadow-blue-500/20"
+            className="btn-ink text-sm sm:text-base font-bold px-8 py-4 shadow-xl"
           >
-            Start Step 1: Schedule Your 15-Minute Call
-            <ArrowRight className="w-5 h-5 ml-1" />
+            <span>Start Step 1: Schedule Your 15-Minute Call</span>
+            <ArrowRight className="w-5 h-5 ml-1 text-lime" />
           </a>
-          <p className="mt-3 text-xs text-slate-500">
+          <p className="mt-3 text-xs text-ink/50">
             No credit card required • Free 15-minute consultation • 100% no-pressure advice
           </p>
         </div>
+
       </div>
     </section>
   );

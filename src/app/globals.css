@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --lime: #2563EB;
-  --accent: #2563EB;
-  --pine: #0F172A;
-  --ink: #0F172A;
-  --coal: #1E293B;
-  --paper: #FFFFFF;
-  --sand: #F8FAFC;
+  --lime: #fff9b2;
+  --accent: #fff9b2;
+  --pine: #274a44;
+  --ink: #122522;
+  --coal: #17302c;
+  --paper: #FAF9F5;
+  --sand: #EDEAE0;
   --font-archivo: 'Archivo', sans-serif;
   --font-inter: 'Inter', sans-serif;
 }
 
 ::selection {
-  background: #DBEAFE;
-  color: #1E40AF;
+  background: var(--lime);
+  color: var(--pine);
 }
 
 html {
@@ -126,20 +126,20 @@ section[id] {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  border-radius: 0.75rem;
-  background: #2563EB;
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: 0.875rem 1.75rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.3);
+  border-radius: 9999px;
+  background: var(--lime);
+  color: #122522;
+  font-weight: 800;
+  font-size: 0.925rem;
+  padding: 0.95rem 1.8rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  box-shadow: 0 10px 25px -5px rgba(255, 249, 178, 0.4);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  background-color: #1D4ED8;
-  box-shadow: 0 8px 20px -2px rgba(37, 99, 235, 0.45);
+  background-color: #fffde6;
+  box-shadow: 0 14px 34px -10px rgba(39, 74, 68, 0.45);
 }
 
 .btn-ghost {
@@ -147,22 +147,41 @@ section[id] {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  border-radius: 0.75rem;
-  border: 1.5px solid #CBD5E1;
-  background: #FFFFFF;
-  color: #0F172A;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #fff;
   font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.875rem 1.75rem;
-  transition: all 0.2s ease;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  font-size: 0.925rem;
+  padding: 0.95rem 1.8rem;
+  transition: all 0.25s ease;
 }
 
 .btn-ghost:hover {
-  border-color: #94A3B8;
-  background: #F8FAFC;
-  color: #2563EB;
+  border-color: rgba(255, 249, 178, 0.85);
+  background: rgba(255, 249, 178, 0.1);
+  color: var(--lime);
   transform: translateY(-1px);
+}
+
+.btn-ink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 9999px;
+  background: var(--pine);
+  color: var(--lime);
+  font-weight: 800;
+  font-size: 0.925rem;
+  padding: 1rem 1.8rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.btn-ink:hover {
+  background: #122522;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -12px rgba(18, 37, 34, 0.65);
 }
 
 .btn-emerald {
@@ -170,7 +189,7 @@ section[id] {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  border-radius: 0.75rem;
+  border-radius: 9999px;
   background: #059669;
   color: #FFFFFF;
   font-weight: 700;

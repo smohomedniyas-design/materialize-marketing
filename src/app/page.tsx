@@ -1,7 +1,7 @@
 import React from 'react';
-import { HeroClean } from '@/components/HeroClean';
+import { HeroBespoke } from '@/components/HeroBespoke';
 import { ClientMarquee } from '@/components/ClientMarquee';
-import { ServicesClean } from '@/components/ServicesClean';
+import { ServicesMatrix } from '@/components/ServicesMatrix';
 import { ProcessClean } from '@/components/ProcessClean';
 import { WorkClean } from '@/components/WorkClean';
 import { PricingClean } from '@/components/PricingClean';
@@ -11,14 +11,14 @@ import { ContactClean } from '@/components/ContactClean';
 export default function HomePage() {
   return (
     <>
-      {/* 1. Welcoming, High-Trust Skol-Style Hero */}
-      <HeroClean />
+      {/* 1. Cinematic 3D Ambient Video Hero with Progress Indicators & Editorial Headline */}
+      <HeroBespoke />
 
-      {/* 2. Client Trust Marquee Bar */}
+      {/* 2. Sleek Midnight Client Proof Marquee Bar */}
       <ClientMarquee />
 
-      {/* 3. The 4 Core Small-Business Marketing Pillars */}
-      <ServicesClean />
+      {/* 3. Comprehensive Skol-Style 8-Service Matrix with Category Filters */}
+      <ServicesMatrix />
 
       {/* 4. Streamlined 3-Step "No Stress" Roadmap */}
       <ProcessClean />
@@ -32,7 +32,7 @@ export default function HomePage() {
       {/* 7. Free 5-Minute Marketing Audit & Online Score Diagnostic */}
       <OnlineScoreAudit />
 
-      {/* 8. Direct Consultation Booking & Agency Contact Form */}
+      {/* 8. Direct Consultation Booking & Texas Studio Contact */}
       <ContactClean />
     </>
   );
