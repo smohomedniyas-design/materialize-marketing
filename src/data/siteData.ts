@@ -629,7 +629,7 @@ export const PRICING_PACKAGES: PricingTier[] = [
       'Google Business Profile & Google Analytics (GA4) integration',
       'Ongoing basic content updates & technical maintenance included',
       'Annual billing discount: $20/mo ($240/yr - save $60)',
-      '12-month hosting agreement (or $200 buyout to take files early)',
+      '12-month hosting agreement for your first year (renews monthly thereafter, or $200 early file buyout)',
     ],
   },
   {
@@ -638,7 +638,7 @@ export const PRICING_PACKAGES: PricingTier[] = [
     name: 'Commerce',
     tagline: 'For online stores ready to sell at scale with zero friction.',
     price: '$499',
-    period: 'setup + $99/mo',
+    period: 'setup + $99/mo*',
     popular: true,
     idealFor: 'Growing brands, streetwear labels, and retailers looking to drive online sales with active store management.',
     timeline: '2-3 weeks delivery',
@@ -650,6 +650,7 @@ export const PRICING_PACKAGES: PricingTier[] = [
       'Third-party app integrations (Klaviyo, Reviews, Instagram Shop)',
       'Ongoing speed optimization & conversion rate tuning',
       'Dedicated direct chat channel (Slack / WhatsApp) for quick updates',
+      '*Starting at $99/mo depending on store catalog size and transaction volume',
     ],
   },
   {
@@ -832,6 +833,10 @@ export const FAQS = [
     a: 'We keep upfront costs low and affordable by bundling custom web design with ongoing managed hosting and care. For example, our Launch package is just $299 upfront plus $25/month ($20/month billed annually at $240/year). That covers your high-speed cloud hosting, SSL security, domain maintenance, and ongoing updates so your site never gets outdated or broken.',
   },
   {
+    q: 'What is the 12-month agreement?',
+    a: 'Because we charge very low upfront fees ($299 instead of $3,000+), web development packages include a 12-month managed hosting agreement to protect the build. After the first year, it automatically renews on a flexible month-to-month basis. If you ever want to move your files to self-hosting before 12 months, an optional $200 early file release buyout is available.',
+  },
+  {
     q: 'How long does a typical website take to launch?',
     a: 'Most standard small business websites launch in just 1 to 2 weeks. Custom e-commerce stores with large catalogs typically take 2 to 3 weeks. We provide clear milestone dates during Discovery and keep you updated every step of the way.',
   },
@@ -844,6 +849,10 @@ export const FAQS = [
     a: 'Beyond web design, we provide monthly social media management (custom graphics, Reels editing, captions, scheduling), Google Business Profile local SEO optimization, 24/7 AI lead capture chatbots, and automated review generation systems.',
   },
   {
+    q: 'How does your 25% B2B Strategic Partner Affiliate program work?',
+    a: 'If you are a CPA, merchant services/POS provider, commercial banker, or business consultant, you can partner with Materialize Marketing. When you introduce a client who needs a website or digital marketing retainer, we pay you 25% recurring monthly commission for the lifetime of that client account.',
+  },
+  {
     q: 'Can we easily request changes and updates to our site?',
     a: 'Yes! That is why we include ongoing care in our monthly plans. Whenever you need a new staff member added, photos swapped, prices adjusted, or a promotion posted, just message us on your direct communication channel and we handle it for you.',
   },
@@ -852,3 +861,174 @@ export const FAQS = [
     a: 'Our agency headquarters is in Prosper, Texas (Dallas-Fort Worth metropolitan area), working in coordination with Sands Planning Group. We serve small businesses and growing brands nationwide across the United States.',
   },
 ];
+
+export interface AddOnService {
+  id: string;
+  name: string;
+  price: string;
+  period?: string;
+  tagline: string;
+  description: string;
+  benefits: string[];
+  popular?: boolean;
+}
+
+export const ADD_ON_SERVICES: AddOnService[] = [
+  {
+    id: 'business-email',
+    name: 'Custom Professional Business Email',
+    price: '$10',
+    period: '/mo per mailbox',
+    tagline: 'Stop using @gmail.com for your business.',
+    description: 'Upgrade your credibility with Google Workspace or custom domain mailboxes (you@yourbusiness.com) configured with DKIM, SPF, and DMARC security so your customer inquiries never hit spam.',
+    benefits: [
+      'Custom @yourbusiness.com domain email address',
+      'Full Google Workspace or IMAP/SMTP integration',
+      'SPF, DKIM & DMARC DNS authentication configured',
+      'Sync across iPhone, Android, Outlook & Mac Mail',
+    ],
+    popular: true,
+  },
+  {
+    id: 'qr-review-stands',
+    name: 'Google Review QR Countertop Stands & Window Decals',
+    price: '$49',
+    period: 'one-time',
+    tagline: 'Collect 5-star Google reviews on autopilot at point of sale.',
+    description: 'Custom-designed acrylic tabletop stands and weather-resistant window stickers printed with your unique direct-to-Google review QR code for dining tables, checkout counters, or reception desks.',
+    benefits: [
+      'Premium branded acrylic countertop display stand',
+      'Direct 1-tap link straight to your Google 5-star review box',
+      '2 weatherproof window/door review decals included',
+      'Proven to increase local Google reviews by 300%+',
+    ],
+    popular: true,
+  },
+  {
+    id: 'customer-loyalty',
+    name: 'Customer Loyalty & Digital Rewards Engine',
+    price: '$199',
+    period: 'setup + $25/mo',
+    tagline: 'Turn one-time patrons into lifetime repeat buyers.',
+    description: 'Turnkey digital rewards and loyalty membership system for restaurants, cafes, salons, and retail shops. Points per purchase, automated birthday gift cards, and SMS promo alerts.',
+    benefits: [
+      'Points-per-dollar loyalty balance & visit tracking',
+      'Automated $10 birthday gift card and anniversary workflows',
+      'Self-serve VIP signup pop-up & countertop QR enrollment',
+      'Integrates seamlessly with Square, Clover, or custom POS',
+    ],
+  },
+  {
+    id: 'online-booking',
+    name: 'Online Appointment & Booking Engine',
+    price: '$149',
+    period: 'setup',
+    tagline: 'Self-serve scheduling for barbers, salons, medspas & contractors.',
+    description: 'Seamless integration with Booksy, Calendly, Square Appointments, or custom scheduling tools so clients can book appointments 24/7 without calling your front desk.',
+    benefits: [
+      'Real-time calendar availability & staff selection',
+      'Automated SMS and email booking confirmations and reminders',
+      'Eliminates phone tag and captured missed appointment revenue',
+      'Mobile-friendly self-serve checkout deposit option',
+    ],
+  },
+  {
+    id: 'video-podcast-media',
+    name: 'Cinematic Video Hero & Podcast Integration',
+    price: '$199',
+    period: 'setup',
+    tagline: 'Elevate brand authority with rich multimedia storytelling.',
+    description: 'Custom video background compression and streaming integration, plus an embedded podcast media player connecting your Apple/Spotify RSS feed directly on your homepage.',
+    benefits: [
+      'Ultra-fast streaming video background (< 1.5MB weight)',
+      'Direct Apple Podcasts & Spotify media player widget',
+      'Custom episode show-notes archive and audio player',
+      'Mobile-optimized zero-lag playback',
+    ],
+  },
+];
+
+export interface CareerRole {
+  id: string;
+  title: string;
+  type: 'Full-Time' | 'Part-Time' | 'Internship' | 'Contract';
+  location: string;
+  department: string;
+  description: string;
+  responsibilities: string[];
+  requirements: string[];
+}
+
+export const CAREER_ROLES: CareerRole[] = [
+  {
+    id: 'lead-web-designer',
+    title: 'Lead Web Designer & UI/UX Specialist',
+    type: 'Full-Time',
+    location: 'Remote (US or Global CST overlap)',
+    department: 'Design & Engineering',
+    description: 'Lead visual design and high-converting website layouts in Figma and modern frontend stacks (React/Next.js/WordPress). Build design systems that turn visitors into paying customers.',
+    responsibilities: [
+      'Design clean, mobile-first website mockups and brand identity kits in Figma',
+      'Collaborate with developers to translate prototypes into production-grade websites',
+      'Conduct visual QA and ensure responsive precision across mobile, tablet, and desktop viewports',
+    ],
+    requirements: [
+      'Portfolio showcasing clean, modern, typography-driven commercial websites',
+      'Deep mastery of Figma, auto-layout, components, and responsive breakpoints',
+      'Understanding of HTML/CSS/Tailwind and web speed principles',
+    ],
+  },
+  {
+    id: 'creative-content-specialist',
+    title: 'Creative Content & Short-Form Video Specialist',
+    type: 'Part-Time',
+    location: 'Remote',
+    department: 'Marketing & Social Media',
+    description: 'Create engaging short-form video reels, TikToks, and branded carousel graphics in Canva and CapCut for agency clients and internal brand growth.',
+    responsibilities: [
+      'Edit 12-16 high-impact short-form video reels and motion graphics monthly',
+      'Design branded social media carousels and story kits in Canva',
+      'Write persuasive, concise captions with targeted local hashtags',
+    ],
+    requirements: [
+      'Proven portfolio of edited short-form Reels, TikToks, or YouTube Shorts',
+      'Speed and aesthetic taste in Canva and video editing tools (CapCut/Premiere)',
+      'Strong eye for pacing, hooks, and clean typography overlays',
+    ],
+  },
+  {
+    id: 'b2b-outbound-intern',
+    title: 'B2B Outbound & Lead Generation Intern',
+    type: 'Internship',
+    location: 'Remote',
+    department: 'Sales & Growth',
+    description: 'Assist the growth team in identifying high-potential small businesses on Google Maps and state LLC filings, preparing free mockup audits, and conducting outbound outreach.',
+    responsibilities: [
+      'Scrape and qualify local service businesses on Google Maps lacking modern websites',
+      'Coordinate with design squad to generate customized preview mockups',
+      'Support LinkedIn and direct mail outbound campaign tracking in CRM',
+    ],
+    requirements: [
+      'Curiosity for digital marketing, cold outreach, and small business economics',
+      'Attention to detail, organized note-taking, and strong written communication',
+      'Familiarity with Google Sheets, LinkedIn, and social media platforms',
+    ],
+  },
+];
+
+export const PARTNER_PROGRAM = {
+  clientReferral: {
+    reward: '$100',
+    type: 'Direct cash or invoice credit',
+    audience: 'Existing clients and small business owners',
+    terms: 'Paid immediately when your referred peer launches a website or retainer with us.',
+  },
+  strategicPartner: {
+    reward: '25% Lifetime Recurring Revenue',
+    type: 'Ongoing monthly affiliate distribution',
+    audience: 'CPAs, Merchant Service / POS Providers, Commercial Bankers & Advisors',
+    description: 'If you serve small businesses with credit card terminals, tax planning, or corporate advisory, partner with Materialize Marketing. When your clients retain us for digital marketing or web maintenance, you receive 25% of gross monthly retainer revenue for the life of the account.',
+    example: 'Refer a restaurant or medical practice on a $320/mo marketing retainer: you earn $80/mo = $960/yr per client. 20 client referrals = $19,200/yr in passive recurring income.',
+  },
+};
+

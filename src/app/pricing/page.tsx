@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { PRICING_PACKAGES, FAQS } from '@/data/siteData';
+import { PRICING_PACKAGES, FAQS, ADD_ON_SERVICES } from '@/data/siteData';
 import { CostEstimator } from '@/components/CostEstimator';
-import { Check, X, ArrowRight, HelpCircle } from 'lucide-react';
+import { Check, X, ArrowRight, HelpCircle, Mail, QrCode, HeartHandshake, Calendar, Video, Sparkles, Building2 } from 'lucide-react';
 import { CtaBanner } from '@/components/CtaBanner';
 
 export const metadata: Metadata = {
@@ -220,40 +220,180 @@ export default function PricingPage() {
             </div>
           </div>
 
-          {/* Referral Rewards Program Banner */}
-          <div className="mt-20 max-w-5xl mx-auto rounded-3xl bg-ink text-white p-8 md:p-12 border border-white/10 shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-lime/10 rounded-full blur-3xl pointer-events-none" />
-            <div className="relative z-10 grid md:grid-cols-12 gap-8 items-center">
-              <div className="md:col-span-8 space-y-3">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-lime/20 px-3 py-1 text-xs font-black uppercase tracking-wider text-lime">
-                  🎁 Client Referral Rewards Program
-                </span>
-                <h3 className="font-display text-2xl md:text-3xl font-extrabold text-white">
-                  Earn a <span className="text-lime">$100 Reward</span> for Every Business You Refer.
-                </h3>
-                <p className="text-sm text-white/70 leading-relaxed">
-                  Know a fellow business owner, doctor, contractor, or financial advisor whose website is outdated or non-existent?
-                  Introduce them to Materialize Marketing. When they launch a site with us or sign up for ongoing hosting,
-                  we send you a <strong>$100 direct cash reward</strong> or apply a <strong>$100 invoice credit</strong> to your account.
-                </p>
-                <p className="text-xs text-white/50">
-                  ✓ Unlimited referrals &nbsp;•&nbsp; ✓ Paid upon client launch &nbsp;•&nbsp; ✓ Zero complex paperwork
-                </p>
+          {/* Popular Small Business Growth Add-Ons */}
+          <div className="mt-28">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <span className="eyebrow justify-center text-ink/50">Turnkey Upgrades</span>
+              <h2 className="section-h2 mt-3">Popular Small Business Add-Ons</h2>
+              <p className="mt-4 text-sm text-ink/70">
+                High-leverage tactical tools that elevate your brand authority and capture more revenue from day one.
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {ADD_ON_SERVICES.map((addon) => {
+                const getIcon = () => {
+                  switch (addon.id) {
+                    case 'business-email':
+                      return <Mail className="w-5 h-5 text-lime" />;
+                    case 'qr-review-stands':
+                      return <QrCode className="w-5 h-5 text-lime" />;
+                    case 'customer-loyalty':
+                      return <HeartHandshake className="w-5 h-5 text-lime" />;
+                    case 'online-booking':
+                      return <Calendar className="w-5 h-5 text-lime" />;
+                    case 'video-podcast-media':
+                      return <Video className="w-5 h-5 text-lime" />;
+                    default:
+                      return <Sparkles className="w-5 h-5 text-lime" />;
+                  }
+                };
+
+                return (
+                  <div
+                    key={addon.id}
+                    className="relative rounded-3xl border border-ink/10 bg-white p-6 sm:p-7 shadow-sm transition-transform duration-300 hover:-translate-y-1 flex flex-col justify-between"
+                  >
+                    {addon.popular && (
+                      <span className="absolute -top-3 right-6 whitespace-nowrap rounded-full bg-lime px-3 py-1 text-[10px] font-black uppercase tracking-wider text-ink shadow-sm">
+                        Popular Choice
+                      </span>
+                    )}
+                    <div>
+                      <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-ink text-white mb-4">
+                        {getIcon()}
+                      </div>
+                      <h3 className="font-display font-extrabold text-xl text-ink">
+                        {addon.name}
+                      </h3>
+                      <p className="mt-1 text-xs font-semibold text-lime-800">
+                        {addon.tagline}
+                      </p>
+                      <div className="mt-4 flex items-baseline">
+                        <span className="font-display text-2xl font-black text-ink">
+                          {addon.price}
+                        </span>
+                        {addon.period && (
+                          <span className="ml-1 text-xs font-medium text-ink/60">
+                            {addon.period}
+                          </span>
+                        )}
+                      </div>
+                      <p className="mt-3 text-xs text-ink/70 leading-relaxed">
+                        {addon.description}
+                      </p>
+                      <ul className="mt-5 space-y-2 text-xs">
+                        {addon.benefits.map((b, bIdx) => (
+                          <li key={bIdx} className="flex items-start gap-2 text-ink/80">
+                            <Check className="w-3.5 h-3.5 text-lime-700 shrink-0 mt-0.5" />
+                            <span>{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="mt-6 pt-4 border-t border-ink/5">
+                      <Link
+                        href={`/contact?addon=${addon.id}`}
+                        className="btn-ink-line w-full text-center !py-2.5 !text-xs"
+                      >
+                        Add to Package
+                        <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Referral & Strategic Partner Affiliate Programs */}
+          <div className="mt-28 space-y-8">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <span className="eyebrow justify-center text-ink/50">Partnerships &amp; Incentives</span>
+              <h2 className="section-h2 mt-3">Two Ways to Partner &amp; Earn</h2>
+              <p className="mt-3 text-sm text-ink/70">
+                Whether you are a client introducing a friend or a B2B advisor serving businesses, we reward your trust.
+              </p>
+            </div>
+
+            <div className="grid gap-8 lg:grid-cols-2">
+              {/* Option 1: Client Referral ($100 Reward) */}
+              <div className="rounded-3xl bg-white border border-ink/10 p-8 shadow-md flex flex-col justify-between">
+                <div className="space-y-4">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-sand px-3 py-1 text-xs font-black uppercase tracking-wider text-ink">
+                    🎁 Client Referral Reward
+                  </span>
+                  <h3 className="font-display text-2xl font-extrabold text-ink">
+                    Earn a <span className="text-lime-800">$100 Reward</span> for Every Business You Refer.
+                  </h3>
+                  <p className="text-sm text-ink/70 leading-relaxed">
+                    Know a fellow restaurant owner, doctor, contractor, or financial advisor whose website is outdated or non-existent?
+                    Introduce them to Materialize Marketing. When they launch a site with us or sign up for ongoing hosting,
+                    we send you a <strong>$100 direct cash reward</strong> or apply a <strong>$100 invoice credit</strong> to your account.
+                  </p>
+                  <ul className="space-y-2 text-xs text-ink/80 pt-2">
+                    <li className="flex items-center gap-2"><Check className="w-4 h-4 text-lime-700" /> Unlimited referrals &amp; payouts</li>
+                    <li className="flex items-center gap-2"><Check className="w-4 h-4 text-lime-700" /> Paid immediately upon client launch</li>
+                    <li className="flex items-center gap-2"><Check className="w-4 h-4 text-lime-700" /> Zero complex paperwork</li>
+                  </ul>
+                </div>
+                <div className="mt-8 pt-6 border-t border-ink/10 flex flex-col sm:flex-row gap-3">
+                  <Link
+                    href="/contact?type=Client+Referral"
+                    className="btn-ink w-full text-center !py-3 !text-sm"
+                  >
+                    Submit a Client Referral
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                  <a
+                    href="tel:4692157794"
+                    className="btn-ghost w-full text-center !py-3 !text-sm"
+                  >
+                    Call (469) 215-7794
+                  </a>
+                </div>
               </div>
-              <div className="md:col-span-4 flex flex-col gap-3">
-                <Link
-                  href="/contact?type=Referral+Reward"
-                  className="btn-primary w-full text-center !py-3 !text-sm"
-                >
-                  Submit a Referral
-                  <ArrowRight className="w-4 h-4 ml-1" />
-                </Link>
-                <a
-                  href="tel:4692157794"
-                  className="text-xs text-center text-white/60 hover:text-white transition-colors"
-                >
-                  Or call (469) 215-7794 to introduce
-                </a>
+
+              {/* Option 2: Strategic B2B Partner Affiliate (25% Lifetime Recurring) */}
+              <div className="rounded-3xl bg-ink text-white border border-white/10 p-8 shadow-2xl relative overflow-hidden flex flex-col justify-between">
+                <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-lime/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative z-10 space-y-4">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-lime/20 px-3 py-1 text-xs font-black uppercase tracking-wider text-lime">
+                    <Building2 className="w-3.5 h-3.5" /> Strategic B2B Partner Affiliate
+                  </span>
+                  <h3 className="font-display text-2xl font-extrabold text-white">
+                    Earn <span className="text-lime">25% Lifetime Recurring Revenue</span> on Retainers.
+                  </h3>
+                  <p className="text-sm text-white/70 leading-relaxed">
+                    Designed for <strong>CPAs, Merchant Service &amp; POS Agents, Commercial Bankers, and Business Consultants</strong>. When your small business clients need modern web infrastructure or hands-free digital marketing, partner with Materialize Marketing.
+                  </p>
+                  <div className="rounded-2xl bg-white/5 border border-white/10 p-4 text-xs text-white/80 space-y-2">
+                    <p className="font-bold text-lime">The 25% Recurring Math:</p>
+                    <p className="text-white/70">
+                      Refer a client on a $320/mo marketing retainer: you receive <strong>$80/mo = $960/yr</strong> per client for the life of the account. Refer 20 clients = <strong>$19,200/year</strong> in hands-off recurring passive revenue.
+                    </p>
+                  </div>
+                  <ul className="space-y-2 text-xs text-white/80 pt-1">
+                    <li className="flex items-center gap-2"><Check className="w-4 h-4 text-lime" /> Transparent quarterly partner statements</li>
+                    <li className="flex items-center gap-2"><Check className="w-4 h-4 text-lime" /> Direct alignment with Sands Planning Group corporate advisory</li>
+                    <li className="flex items-center gap-2"><Check className="w-4 h-4 text-lime" /> Full co-branded client presentation decks provided</li>
+                  </ul>
+                </div>
+                <div className="relative z-10 mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row gap-3">
+                  <Link
+                    href="/contact?type=B2B+Partner+Affiliate"
+                    className="btn-primary w-full text-center !py-3 !text-sm"
+                  >
+                    Apply for B2B Partner Affiliate
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                  <a
+                    href="tel:4692157794"
+                    className="btn-ghost w-full text-center !py-3 !text-sm text-white hover:text-lime"
+                  >
+                    Direct Partner Line
+                  </a>
+                </div>
               </div>
             </div>
           </div>

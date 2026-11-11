@@ -119,6 +119,11 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/careers" className="text-white/70 hover:text-white transition-colors">
+                  Careers &amp; Internships
+                </Link>
+              </li>
+              <li>
                 <a href="#free-audit" className="text-lime hover:underline font-bold transition-colors inline-flex items-center gap-1">
                   <span>Free Online Score</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
