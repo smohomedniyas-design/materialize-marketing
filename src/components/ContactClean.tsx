@@ -1,18 +1,40 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, CheckCircle2, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Phone, Mail, MapPin, CheckCircle2, ArrowRight, ShieldCheck, Check } from 'lucide-react';
 
 export const ContactClean: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [selectedServices, setSelectedServices] = useState<string[]>([
+    'Website & Hosting',
+  ]);
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     phone: '',
     email: '',
     businessName: '',
-    serviceNeeded: 'New Website ($299 + $25/mo)',
     notes: '',
   });
+
+  const availableServices = [
+    'Website & Hosting',
+    'Local SEO & Google Maps',
+    'Paid Ads (Google & Meta)',
+    'Social Media Management',
+    'Free Marketing Audit',
+    '24/7 AI Voice & Booking',
+  ];
+
+  const toggleService = (service: string) => {
+    if (selectedServices.includes(service)) {
+      if (selectedServices.length > 1) {
+        setSelectedServices(selectedServices.filter((s) => s !== service));
+      }
+    } else {
+      setSelectedServices([...selectedServices, service]);
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,47 +51,47 @@ export const ContactClean: React.FC = () => {
             <p className="eyebrow text-ink/50">Direct Agency Contact</p>
 
             <h2 className="section-h2 text-ink">
-              Ready to Upgrade Your Marketing?
+              Get Started on Your Digital Growth.
             </h2>
 
             <p className="text-base sm:text-lg text-ink/70 leading-relaxed">
-              Schedule a casual 15-minute call with our team. We will review your goals, show you real examples from your industry, and give you a flat-rate roadmap with zero pressure.
+              Schedule a casual 15-minute call with our Texas team. We will review your current online presence, show you real mockups and examples from your industry, and give you a clear roadmap with zero pressure.
             </p>
 
             {/* Direct Cards */}
             <div className="space-y-4 pt-2">
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-white border border-ink/10 shadow-sm">
-                <div className="h-10 w-10 rounded-lg bg-ink text-lime grid place-items-center shrink-0">
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-ink/10 shadow-sm">
+                <div className="h-10 w-10 rounded-xl bg-ink text-lime grid place-items-center shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
                   <p className="text-[11px] font-bold text-ink/40 uppercase tracking-wider">Direct Phone</p>
-                  <a href="tel:4692157794" className="text-base font-black text-ink hover:text-pine transition-colors">
+                  <a href="tel:4692157794" className="text-base font-black text-ink hover:text-lime-800 transition-colors">
                     (469) 215-7794
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-white border border-ink/10 shadow-sm">
-                <div className="h-10 w-10 rounded-lg bg-ink text-lime grid place-items-center shrink-0">
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-ink/10 shadow-sm">
+                <div className="h-10 w-10 rounded-xl bg-ink text-lime grid place-items-center shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
                   <p className="text-[11px] font-bold text-ink/40 uppercase tracking-wider">Direct Email</p>
-                  <a href="mailto:hello@materializem.com" className="text-base font-black text-ink hover:text-pine transition-colors">
+                  <a href="mailto:hello@materializem.com" className="text-base font-black text-ink hover:text-lime-800 transition-colors">
                     hello@materializem.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-white border border-ink/10 shadow-sm">
-                <div className="h-10 w-10 rounded-lg bg-ink text-lime grid place-items-center shrink-0">
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-ink/10 shadow-sm">
+                <div className="h-10 w-10 rounded-xl bg-ink text-lime grid place-items-center shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-[11px] font-bold text-ink/40 uppercase tracking-wider">Headquarters</p>
+                  <p className="text-[11px] font-bold text-ink/40 uppercase tracking-wider">Texas Headquarters</p>
                   <p className="text-sm font-black text-ink">
-                    Prosper, Texas 75078 • Dallas-Fort Worth Metro
+                    Prosper, TX 75078 • Dallas-Fort Worth Metro
                   </p>
                 </div>
               </div>
@@ -77,13 +99,13 @@ export const ContactClean: React.FC = () => {
 
             <div className="pt-2">
               <p className="text-xs text-ink/60 flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-pine shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-lime-700 shrink-0" />
                 <span>Operating under Sands Planning Group financial &amp; advisory umbrella.</span>
               </p>
             </div>
           </div>
 
-          {/* Right Column: Clean White Consultation Form */}
+          {/* Right Column: Clean White Consultation Form with Skol-style Checkboxes */}
           <div className="lg:col-span-7">
             <div className="rounded-3xl bg-white p-6 sm:p-8 md:p-10 border border-ink/10 shadow-xl">
               {submitted ? (
@@ -95,7 +117,7 @@ export const ContactClean: React.FC = () => {
                     Consultation Request Received!
                   </h3>
                   <p className="text-sm text-ink/70 max-w-md mx-auto leading-relaxed">
-                    Thank you, {formData.name}. Agency Manager Mohomed Niyas will contact you within 2 to 4 business hours to confirm your free 15-minute strategy call.
+                    Thank you, {formData.firstName}. Agency Manager Mohomed Niyas will contact you within 2 to 4 business hours to confirm your free 15-minute strategy call.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
@@ -105,31 +127,83 @@ export const ContactClean: React.FC = () => {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="border-b border-ink/10 pb-4 mb-4">
-                    <h3 className="font-display text-xl font-black text-ink">
-                      Schedule a Free 15-Minute Consultation
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="border-b border-ink/10 pb-4">
+                    <h3 className="font-display text-2xl font-black text-ink">
+                      Get Started On:
                     </h3>
                     <p className="text-xs text-ink/60 mt-1">
-                      No obligation. Tell us about your goals and our team will get in touch quickly.
+                      Check all that apply. Tell us what you want to achieve and we&apos;ll be in touch quickly.
                     </p>
                   </div>
 
+                  {/* Skol-Style Checkbox Selector */}
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-ink/70 mb-2.5">
+                      What do you need help with? (Check all that apply)
+                    </label>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      {availableServices.map((service) => {
+                        const isChecked = selectedServices.includes(service);
+                        return (
+                          <div
+                            key={service}
+                            onClick={() => toggleService(service)}
+                            className={`cursor-pointer rounded-xl border p-3 flex items-center justify-between text-xs font-bold transition-all ${
+                              isChecked
+                                ? 'border-ink bg-ink text-white shadow-sm'
+                                : 'border-ink/15 bg-sand/20 text-ink/80 hover:bg-sand/40 hover:border-ink/30'
+                            }`}
+                          >
+                            <span>{service}</span>
+                            <span
+                              className={`grid h-4 w-4 place-items-center rounded-md border ${
+                                isChecked
+                                  ? 'bg-lime border-lime text-ink'
+                                  : 'border-ink/20 bg-white'
+                              }`}
+                            >
+                              {isChecked && <Check className="w-3 h-3 stroke-[3]" />}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Name fields */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-ink/70 mb-1.5">
-                        Your Name *
+                        First Name *
                       </label>
                       <input
                         type="text"
                         required
-                        placeholder="John Doe"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full rounded-xl border border-ink/15 bg-sand/30 px-4 py-3 text-sm text-ink placeholder-ink/35 focus:border-pine focus:outline-none focus:ring-1 focus:ring-pine"
+                        placeholder="John"
+                        value={formData.firstName}
+                        onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                        className="w-full rounded-xl border border-ink/15 bg-sand/20 px-4 py-3 text-sm text-ink placeholder-ink/35 focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
                       />
                     </div>
 
+                    <div>
+                      <label className="block text-xs font-bold uppercase tracking-wider text-ink/70 mb-1.5">
+                        Last Name *
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="Doe"
+                        value={formData.lastName}
+                        onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                        className="w-full rounded-xl border border-ink/15 bg-sand/20 px-4 py-3 text-sm text-ink placeholder-ink/35 focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Phone & Email */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-ink/70 mb-1.5">
                         Phone Number *
@@ -140,12 +214,10 @@ export const ContactClean: React.FC = () => {
                         placeholder="(469) 000-0000"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full rounded-xl border border-ink/15 bg-sand/30 px-4 py-3 text-sm text-ink placeholder-ink/35 focus:border-pine focus:outline-none focus:ring-1 focus:ring-pine"
+                        className="w-full rounded-xl border border-ink/15 bg-sand/20 px-4 py-3 text-sm text-ink placeholder-ink/35 focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
                       />
                     </div>
-                  </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-ink/70 mb-1.5">
                         Your Email *
@@ -156,42 +228,22 @@ export const ContactClean: React.FC = () => {
                         placeholder="john@mybusiness.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full rounded-xl border border-ink/15 bg-sand/30 px-4 py-3 text-sm text-ink placeholder-ink/35 focus:border-pine focus:outline-none focus:ring-1 focus:ring-pine"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-ink/70 mb-1.5">
-                        Business Name or Website
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="e.g. Apex Roofing / www.apex.com"
-                        value={formData.businessName}
-                        onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
-                        className="w-full rounded-xl border border-ink/15 bg-sand/30 px-4 py-3 text-sm text-ink placeholder-ink/35 focus:border-pine focus:outline-none focus:ring-1 focus:ring-pine"
+                        className="w-full rounded-xl border border-ink/15 bg-sand/20 px-4 py-3 text-sm text-ink placeholder-ink/35 focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
                       />
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-wider text-ink/70 mb-1.5">
-                      Service of Interest
+                      Business Name or Current Website (Optional)
                     </label>
-                    <select
-                      value={formData.serviceNeeded}
-                      onChange={(e) => setFormData({ ...formData, serviceNeeded: e.target.value })}
-                      className="w-full rounded-xl border border-ink/15 bg-sand/30 px-4 py-3 text-sm text-ink focus:border-pine focus:outline-none focus:ring-1 focus:ring-pine"
-                    >
-                      <option>New Website &amp; Hosting ($299 + $25/mo)</option>
-                      <option>Local SEO &amp; Google Map Pack ($497/mo)</option>
-                      <option>Google Ads (PPC) &amp; Paid Social Advertising</option>
-                      <option>Hands-Free Social Media Management ($399/mo)</option>
-                      <option>Generative AI Search (GEO) Optimization</option>
-                      <option>Branding &amp; Visual Identity System ($399)</option>
-                      <option>24/7 AI Voice &amp; Chat Receptionist</option>
-                      <option>Complete All-In Marketing Retainer ($997/mo)</option>
-                    </select>
+                    <input
+                      type="text"
+                      placeholder="e.g. Prosper Dental Care / www.prosperdental.com"
+                      value={formData.businessName}
+                      onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
+                      className="w-full rounded-xl border border-ink/15 bg-sand/20 px-4 py-3 text-sm text-ink placeholder-ink/35 focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
+                    />
                   </div>
 
                   <div>
@@ -199,35 +251,32 @@ export const ContactClean: React.FC = () => {
                       Tell us about your business goals (Optional)
                     </label>
                     <textarea
-                      rows={3}
-                      placeholder="What are you looking to achieve over the next 90 days? Any deadlines?"
+                      rows={2}
+                      placeholder="What are you hoping to achieve over the next 90 days? Any deadlines?"
                       value={formData.notes}
                       onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                      className="w-full rounded-xl border border-ink/15 bg-sand/30 px-4 py-3 text-sm text-ink placeholder-ink/35 focus:border-pine focus:outline-none focus:ring-1 focus:ring-pine"
+                      className="w-full rounded-xl border border-ink/15 bg-sand/20 px-4 py-3 text-sm text-ink placeholder-ink/35 focus:border-ink focus:outline-none focus:ring-1 focus:ring-ink"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full btn-ink text-center justify-center py-4 text-base font-bold mt-2"
+                    className="w-full btn-primary text-center justify-center py-4 text-base font-bold mt-2"
                   >
                     <span>Request Free 15-Minute Strategy Call</span>
-                    <ArrowRight className="w-5 h-5 ml-1 text-lime" />
+                    <ArrowRight className="w-5 h-5 ml-1 text-ink" />
                   </button>
 
-                  <div className="mt-4 p-3.5 rounded-xl bg-sand/60 border border-ink/10 text-left space-y-1.5 text-xs text-ink/75">
+                  <div className="p-3.5 rounded-2xl bg-sand/60 border border-ink/10 text-left space-y-1 text-xs text-ink/75">
                     <p className="font-bold text-ink flex items-center gap-1.5">
                       <ShieldCheck className="w-4 h-4 text-emerald-700 shrink-0" />
                       What happens after you reach out:
                     </p>
-                    <p className="text-[11px] leading-tight text-ink/70">
+                    <p className="text-[11px] text-ink/70">
                       1. Agency Manager Mohomed Niyas confirms your call time within 2-4 business hours.
                     </p>
-                    <p className="text-[11px] leading-tight text-ink/70">
+                    <p className="text-[11px] text-ink/70">
                       2. We review your goals and share real examples and pricing for your industry.
-                    </p>
-                    <p className="text-[11px] leading-tight text-ink/70">
-                      3. Zero automated sales calls or aggressive follow-ups.
                     </p>
                   </div>
                 </form>
